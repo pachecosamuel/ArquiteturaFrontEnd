@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
 import { MainMenuContainer } from "../styles/MainMenuContainer";
 
 export const MainMenu = () => (
     <MainMenuContainer>
         <ul>
-            <li>Home</li>
-            <li>Sobre</li>
+            <li><Link to="/teste">Home</Link></li>
+
+            <li><Link to="/sobre">Sobre</Link></li>
         </ul>
     </MainMenuContainer>
 )
