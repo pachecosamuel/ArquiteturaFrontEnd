@@ -9,7 +9,8 @@ export const MovieDetails = () => {
 
     const fetchMovie = async () => {
         const { data } = await MoviesService.getMoviesById(movie_id);
-        setMovie(data);
+        setMovie(data.results);
+        console.log(data)
     }
 
     useEffect(() => {
@@ -21,8 +22,6 @@ export const MovieDetails = () => {
             <h1>{movie.title}</h1>
 
             <article>{movie.overview}</article>
-
-
         </>
     )
 }
