@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 import { Home } from './views/Home';
 import { Sobre } from './views/Sobre';
-import { MovieDetails } from './components/MovieDetails';
 
 
 function App() {
@@ -23,7 +22,7 @@ function App() {
 
           <Route path='/sobre' element={<Sobre />} />
 
-          <Route path='/movie/:id' element={<MovieDetails />} />
+          {/* <Route path='/movie/:id' element={<MovieDetails />} /> */}
 
         </Routes>
 
