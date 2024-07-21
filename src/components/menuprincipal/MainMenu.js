@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MainMenuContainer } from "../styles/MainMenuContainer";
+import { MainMenuContainer } from "./MainMenuContainer";
 
 export const MainMenu = () => (
     <MainMenuContainer>

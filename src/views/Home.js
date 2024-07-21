@@ -1,5 +1,5 @@
-import { MoviesList } from "../components/MoviesList"
-import { MoviesContainer } from "../styles/MovieContainer"
+import { MoviesList } from "../components/Movies/MoviesList"
+import { MoviesContainer } from "../components/Movies/MovieContainer"
 import { useEffect, useState } from 'react';
 import { MoviesService } from '../api/MoviesService';
 

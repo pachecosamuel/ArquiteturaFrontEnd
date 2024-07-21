@@ -1,4 +1,4 @@
-import { Header } from './components/Header';
+import { Header } from "./components/cabecalho/Header";
 import {
   BrowserRouter as Router,
   Routes,
@@ -24,8 +24,6 @@ function App() {
           <Route path='/sobre' element={<Sobre />} />
           
           <Route path='/formulario' element={<SimpleForm />} />
-
-          {/* <Route path='/movie/:id' element={<MovieDetails />} /> */}
 
         </Routes>
 

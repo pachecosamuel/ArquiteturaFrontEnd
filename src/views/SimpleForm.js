@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { db } from '../firebaseConfig';
 import { collection, addDoc } from 'firebase/firestore';
-import { MoviesContainer } from "../styles/MovieContainer"
+import { MoviesContainer } from "../components/Movies/MovieContainer"
 
 export const SimpleForm = () => {
     const [formData, setFormData] = useState({
