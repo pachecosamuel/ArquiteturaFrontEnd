@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout } from "antd";
 import { LeadForm } from "../components/form/LeadForm"
+import { SimpleForm } from "../components/form/SimpleForm"
 // import { ContentContainer } from "./styles"; // Estilo da página
 
 const { Content } = Layout;
@@ -10,7 +11,9 @@ export const LandingPage = () => {
         <Layout>
             <Content>
                 {/* <ContentContainer> */}
-                    <LeadForm />
+                    {/* <LeadForm /> */}
+
+                    <SimpleForm />
                 {/* </ContentContainer> */}
             </Content>
         </Layout>
