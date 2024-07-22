@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import { Home } from './views/Home';
 import { Sobre } from './views/Sobre';
-import { SimpleForm } from './views/SimpleForm';
+import { LandingPage } from './views/LandingPage';
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
 
           <Route path='/sobre' element={<Sobre />} />
           
-          <Route path='/formulario' element={<SimpleForm />} />
+          <Route path='/formulario' element={<LandingPage />} />
 
         </Routes>
 
