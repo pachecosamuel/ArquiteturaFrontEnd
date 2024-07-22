@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { Home } from './views/Home';
 import { Sobre } from './views/Sobre';
+import { LandingPage } from './views/LandingPage';
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
           <Route path='/' element={<Home />} />
 
           <Route path='/sobre' element={<Sobre />} />
+          
+          <Route path='/formulario' element={<LandingPage />} />
 
           {/* <Route path='/movie/:id' element={<MovieDetails />} /> */}
 
