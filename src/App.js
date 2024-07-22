@@ -19,12 +19,10 @@ function App() {
 
         <Routes>
 
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<LandingPage />} />
 
           <Route path='/sobre' element={<Sobre />} />
           
-          <Route path='/formulario' element={<LandingPage />} />
-
         </Routes>
 
       </Router>

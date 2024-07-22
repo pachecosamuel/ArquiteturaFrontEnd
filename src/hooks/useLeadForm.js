@@ -60,3 +60,34 @@ export const useLeadForm = (initialValues) => {
 };
 
 export default useLeadForm;
+
+// {/* <form onSubmit={handleSubmit}>
+//                 <div>
+//                     <label>Nome Completo:</label>
+//                     <input
+//                         type="text"
+//                         name="nomeCompleto"
+//                         value={formData.nomeCompleto}
+//                         onChange={handleChange}
+//                     />
+//                 </div>
+//                 <div>
+//                     <label>Email:</label>
+//                     <input
+//                         type="email"
+//                         name="email"
+//                         value={formData.email}
+//                         onChange={handleChange}
+//                     />
+//                 </div>
+//                 <div>
+//                     <label>Telefone:</label>
+//                     <input
+//                         type="text"
+//                         name="telefone"
+//                         value={formData.telefone}
+//                         onChange={handleChange}
+//                     />
+//                 </div>
+//                 <button type="submit">Enviar</button>
+//             </form> */}
