@@ -4,8 +4,6 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import { Home } from './views/Home';
-import { Sobre } from './views/Sobre';
 import { LandingPage } from './views/LandingPage';
 
 
