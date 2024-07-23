@@ -1,93 +1,59 @@
+// src/hooks/useLeadForm.js
 import { useState } from "react";
-import { addDoc, collection } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig";
+import { notification } from "antd";
+import { validateForm } from "../utils/validation";
 
-export const useLeadForm = (initialValues) => {
-    const [values, setValues] = useState(initialValues);
-    const [errors, setErrors] = useState({});
+export const useLeadForm = () => {
+    const [formState, setFormState] = useState({
+        nomeCompleto: "",
+        email: "",
+        telefone: "",
+    });
+    const [errors, setErrors] = useState({
+        nomeCompleto: "",
+        email: "",
+        telefone: "",
+    });
 
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        setValues({
-            ...values,
-            [name]: value,
-        });
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormState((prev) => ({ ...prev, [name]: value }));
     };
 
-    const validate = () => {
-        const newErrors = {};
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const { errors, isValid } = validateForm(formState);
 
-        // Validate name (must be longer than 3 characters)
-        if (!values.nomeCompleto || values.nomeCompleto.length <= 3) {
-            newErrors.nomeCompleto = "Nome completo deve ter mais de 3 caracteres";
-        }
+        setErrors(errors);
 
-        // Validate email (must match pattern)
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!values.email || !emailRegex.test(values.email)) {
-            newErrors.email = "Email inválido";
-        }
-
-        // Validate telefone (Brazilian phone number pattern)
-        const telefoneRegex = /^\d{2}\d{9}$/;
-        if (!values.telefone || !telefoneRegex.test(values.telefone)) {
-            newErrors.telefone = "Telefone inválido. Deve seguir o padrão DDD + 9 números";
-        }
-
-        return newErrors;
-    };
-
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        const validationErrors = validate();
-        setErrors(validationErrors);
-        if (Object.keys(validationErrors).length === 0) {
+        if (isValid) {
             try {
-                await addDoc(collection(db, "leads"), values);
-                setValues(initialValues); // Reset form values after successful submission
+                await addDoc(collection(db, "leads"), formState);
+                notification.success({
+                    message: "Sucesso",
+                    description: "Lead cadastrada com sucesso!",
+                });
+                setFormState({ nomeCompleto: "", email: "", telefone: "" });
             } catch (error) {
-                console.error("Erro ao enviar os dados: ", error);
+                notification.error({
+                    message: "Erro",
+                    description: "Falha ao cadastrar lead.",
+                });
             }
+        } else {
+            notification.error({
+                message: "Erro de validação",
+                description: "Preencha todos os campos corretamente.",
+            });
         }
     };
 
     return {
-        values,
+        formState,
         errors,
         handleChange,
         handleSubmit,
     };
 };
-
-export default useLeadForm;
-
-// {/* <form onSubmit={handleSubmit}>
-//                 <div>
-//                     <label>Nome Completo:</label>
-//                     <input
-//                         type="text"
-//                         name="nomeCompleto"
-//                         value={formData.nomeCompleto}
-//                         onChange={handleChange}
-//                     />
-//                 </div>
-//                 <div>
-//                     <label>Email:</label>
-//                     <input
-//                         type="email"
-//                         name="email"
-//                         value={formData.email}
-//                         onChange={handleChange}
-//                     />
-//                 </div>
-//                 <div>
-//                     <label>Telefone:</label>
-//                     <input
-//                         type="text"
-//                         name="telefone"
-//                         value={formData.telefone}
-//                         onChange={handleChange}
-//                     />
-//                 </div>
-//                 <button type="submit">Enviar</button>
-//             </form> */}

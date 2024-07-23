@@ -9,11 +9,8 @@ export const LandingPage = () => {
     return (
         <Layout>
             <Content>
-                {/* <ContentContainer> */}
                     {/* <LeadForm /> */}
-
                     <SimpleForm />
-                {/* </ContentContainer> */}
             </Content>
         </Layout>
     );
