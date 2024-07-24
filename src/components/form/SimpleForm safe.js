@@ -5,20 +5,13 @@ import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles.js"
 import { Row, Col } from "antd";
 import { Slide } from "react-awesome-reveal";
 import { Input } from "../../common/Input"
-import { notification } from "antd";
-import { validateForm } from './../../utils/validation';
+
 
 export const SimpleForm = () => {
     const [formData, setFormData] = useState({
         nomeCompleto: '',
         email: '',
         telefone: ''
-    });
-
-    const [errors, setErrors] = useState({
-        nomeCompleto: "",
-        email: "",
-        telefone: "",
     });
 
     const handleChange = (e) => {
@@ -31,29 +24,17 @@ export const SimpleForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const { errors, isValid } = validateForm(formData);
-
-        setErrors(errors);
-
-        if (isValid) {
-            try {
-                await addDoc(collection(db, "lead"), formData);
-                notification.success({
-                    message: "Sucesso",
-                    description: "Lead cadastrada com sucesso!",
-                });
-                setFormData({ nomeCompleto: "", email: "", telefone: "" });
-            } catch (error) {
-                notification.error({
-                    message: "Erro",
-                    description: "Falha ao cadastrar lead.",
-                });
-            }
-        } else {
-            notification.error({
-                message: "Erro de validação",
-                description: "Preencha todos os campos corretamente.",
+        try {
+            await addDoc(collection(db, 'lead'), formData);
+            alert('Dados enviados com sucesso!');
+            setFormData({
+                nomeCompleto: '',
+                email: '',
+                telefone: ''
             });
+        } catch (error) {
+            console.error('Erro ao enviar os dados: ', error);
+            alert('Erro ao enviar os dados.');
         }
     };
 
@@ -73,21 +54,20 @@ export const SimpleForm = () => {
                                 <Input
                                     type="text"
                                     name="nomeCompleto"
-                                    placeholder="Seu Nome Completo"
+                                    placeholder="Nome Completo"
                                     value={formData.nomeCompleto}
                                     onChange={handleChange}
                                 />
-                                <Span>{errors.nomeCompleto}</Span>
                             </Col>
                             <Col span={24}>
                                 <Input
                                     type="text"
                                     name="email"
-                                    placeholder="Seu Melhor Email"
+                                    placeholder="Email"
                                     value={formData.email}
                                     onChange={handleChange}
                                 />
-                                <Span>{errors.email}</Span>
+                                {/* {errors.email && <Span>{errors.email}</Span>} */}
                             </Col>
                             <Col span={24}>
                                 <Input
@@ -97,7 +77,7 @@ export const SimpleForm = () => {
                                     value={formData.telefone}
                                     onChange={handleChange}
                                 />
-                                <Span>{errors.telefone}</Span>
+                                {/* {errors.telefone && <Span>{errors.telefone}</Span>} */}
                             </Col>
                             <ButtonContainer>
                                 <button type="submit">Enviar</button>
@@ -111,3 +91,33 @@ export const SimpleForm = () => {
 };
 export default SimpleForm;
 
+{/* <form onSubmit={handleSubmit}>
+                <div>
+                    <label>Nome Completo:</label>
+                    <input
+                        type="text"
+                        name="nomeCompleto"
+                        value={formData.nomeCompleto}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <label>Telefone:</label>
+                    <input
+                        type="text"
+                        name="telefone"
+                        value={formData.telefone}
+                        onChange={handleChange}
+                    />
+                </div>
+                <button type="submit">Enviar</button>
+            </form> */}

@@ -1,13 +1,11 @@
-import { Header } from "./components/cabecalho/Header";
+// import { Header } from "./components/cabecalho/Header";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
-import { Home } from './views/Home';
-import { Sobre } from './views/Sobre';
 import { LandingPage } from './views/LandingPage';
-
+import { Sobre } from "./views/Sobre"
 
 function App() {
 
@@ -15,7 +13,7 @@ function App() {
     <div className="App">
 
       <Router>
-        <Header />
+        {/* <Header /> */}
 
         <Routes>
 
@@ -23,6 +21,10 @@ function App() {
 
           <Route path='/sobre' element={<Sobre />} />
           
+          <Route path='/formulario' element={<LandingPage />} />
+
+          {/* <Route path='/movie/:id' element={<MovieDetails />} /> */}
+
         </Routes>
 
       </Router>
