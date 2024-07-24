@@ -10,6 +10,7 @@ export const Button = styled.button`
   padding: 0.5rem 1rem;
   font-family: ${theme.font.family};
   cursor: pointer;
+  transition: background 0.5s, color 0.5s;
 
   font-size: 1rem;
   border-radius: 30px;

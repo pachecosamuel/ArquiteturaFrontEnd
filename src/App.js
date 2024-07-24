@@ -7,14 +7,14 @@ import {
 import { LandingPage } from './views/LandingPage';
 import { Sobre } from "./views/Sobre"
 
-
 function App() {
 
   return (
     <div className="App">
 
+
+
       <Router>
-        {/* <Header /> */}
 
         <Routes>
 
@@ -23,8 +23,6 @@ function App() {
           <Route path='/sobre' element={<Sobre />} />
           
           <Route path='/formulario' element={<LandingPage />} />
-
-          {/* <Route path='/movie/:id' element={<MovieDetails />} /> */}
 
         </Routes>
 

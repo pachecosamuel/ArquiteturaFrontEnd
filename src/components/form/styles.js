@@ -5,11 +5,16 @@ export const ContactContainer = styled.div`
   background: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `;
 
 export const FormGroup = styled.form`
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 `;
 
 export const Span = styled.span`
