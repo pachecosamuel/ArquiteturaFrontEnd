@@ -5,6 +5,7 @@ import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles.js"
 import { Row, Col } from "antd";
 import { Slide } from "react-awesome-reveal";
 import { Input } from "../../common/Input"
+import { Button } from "../../common/Button"
 import { notification } from "antd";
 import { validateForm } from './../../utils/validation';
 
@@ -100,7 +101,8 @@ export const SimpleForm = () => {
                                 <Span>{errors.telefone}</Span>
                             </Col>
                             <ButtonContainer>
-                                <button type="submit">Enviar</button>
+                                <Button type="submit">Enviar</Button>
+                                {/* <button type="submit">Enviar</button> */}
                             </ButtonContainer>
                         </FormGroup>
                     </Slide>

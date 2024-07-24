@@ -1,4 +1,3 @@
-// src/common/Input.js
 
 import React from 'react';
 import { Input as AntdInput } from 'antd';
