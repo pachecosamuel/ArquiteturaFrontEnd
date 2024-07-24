@@ -4,7 +4,8 @@ export const theme = {
         secondary: "#FACFCE",
         highlight: "#008F8C",
         support: "#015958",
-        neutral: "#023535"
+        neutral: "#023535",
+        forPlaceHolder: "#8DA691"
     },
     font: {
         family: "Lora, serif"
