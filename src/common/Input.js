@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Input as AntdInput } from 'antd';
-import { theme } from '../designSystem/theme';
+import { theme } from '../styles/theme';
 
 const StyledInput = styled(AntdInput)`
   padding: 0.75rem 1rem;

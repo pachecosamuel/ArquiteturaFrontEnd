@@ -1,7 +1,7 @@
 // src/common/Button.js
 
 import styled from "styled-components";
-import { theme } from "../designSystem/theme";
+import { theme } from "../styles/theme";
 
 export const Button = styled.button`
   background-color: ${theme.colors.primary};
