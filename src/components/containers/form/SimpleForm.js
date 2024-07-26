@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { db } from '../../firebaseConfig';
+import { db } from '../../../firebaseConfig.js';
 import { collection, addDoc } from 'firebase/firestore';
 import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles.js";
 import { Row, Col } from "antd";
 import { Slide } from "react-awesome-reveal";
-import { Input } from "../../common/Input"
-import { Button } from "../../common/Button"
+import { Input } from "../../../common/Input.js"
+import { Button } from "../../../common/Button.js"
 import { notification } from "antd";
-import { validateForm } from './../../utils/validation';
+import { validateForm } from '../../../utils/validation.js';
 
 export const SimpleForm = () => {
     const [formData, setFormData] = useState({

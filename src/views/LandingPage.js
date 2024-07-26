@@ -1,9 +1,9 @@
 import React from "react";
 import { Layout } from "antd";
-import { TopSection } from "../components/containers/TopSection"
-import { AboutSection } from "../components/containers/AboutSection"
-import { FooterSection } from "../components/containers/FooterSection"
-import { Header } from "../components/containers/Header"
+import { TopSection } from "../components/containers/topoPagina/TopSection"
+import { AboutSection } from "../components/containers/about/AboutSection"
+import { FooterSection } from "../components/containers/footer/FooterSection"
+import { Header } from "../components/containers/header/Header"
 
 const { Content } = Layout;
 
