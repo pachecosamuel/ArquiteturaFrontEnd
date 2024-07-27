@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const TopContainer = styled.div`
-  padding: 3rem;
   background: #f0f2f5;
+  margin: 1rem;
 
   @media (max-width: 768px) {
     padding: 1rem;
@@ -28,13 +28,6 @@ export const TopContainer = styled.div`
     }
   }
 
-  iframe {
-    border: none;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 480px;
-    height: 270px;
-  }
 `;
 
 export const FlexContainer = styled.div`
@@ -46,6 +39,41 @@ export const FlexContainer = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
   }
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    // ... outros estilos
+    > * {
+      flex: 1;
+    }
+  }
+
+  .video-container {
+    flex: 1;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+
+
+    iframe {
+      height: 360px;
+      width: 100%;
+      max-width: 100%;
+      border: none;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 1201px) {
+      margin-top: 1rem;
+      height: 100%;
+    }
+
+  }
 `;
 
 export const TextBox = styled.div`
@@ -53,8 +81,11 @@ export const TextBox = styled.div`
   text-align: center;
   padding: 0 2rem;
 
-  @media (max-width: 768px) {
-    padding: 0;
-    margin: 1rem 0;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    max-width: 700px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 700px;
   }
 `;

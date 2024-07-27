@@ -1,16 +1,16 @@
 import styled from "styled-components";
+import fundo from '../../../assets/Fundo.png'; 
 
 export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.2rem 0.2rem;
   background: #023535;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   img {
-    width: 192px;
-    height: 192px;
+    width: 148px;
+    height: 148px;
   }
 `;
 
@@ -19,11 +19,12 @@ export const Title = styled.h1`
   color: #fff;
   text-align: center;
   animation: fadeIn 2s ease-in-out, slideIn 1s ease-out;
+  border: 2px solid yellow;
   background: linear-gradient(
     90deg,
     #faf7a0,
-    #facfce
-  ); /* Ajustado para mais contraste */
+    #faf7a0
+  ); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 

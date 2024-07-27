@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Slide } from 'react-awesome-reveal';
-import profileImagem from "../../../assets/Profile.png"
+import profileImagem from "../../../assets/Profile.jpg"
 import { AboutContainer, FlexContainer, TextBox } from "./style"
 
 
@@ -17,7 +17,7 @@ export const AboutSection = () => {
           </TextBox>
         </Slide>
         <Slide direction="right" triggerOnce>
-          <img src={profileImagem} alt="Minha foto profissional" width={350} height={350}/>
+          <img src={profileImagem} alt="Minha foto profissional" width={350} height={450}/>
           <link to=""></link>
         </Slide>
       </FlexContainer>

@@ -31,7 +31,6 @@ export const AboutContainer = styled.div`
   img {
     border-radius: 10px;
     max-width: 100%;
-    height: auto;
   }
 `;
 
@@ -39,11 +38,14 @@ export const AboutContainer = styled.div`
 export const FlexContainer = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+
+  
 
   @media (max-width: 768px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -57,5 +59,12 @@ export const TextBox = styled.div`
     text-align: center;
     padding: 0;
     margin: 1rem 0;
+  }
+
+  @media (min-width: 1024px) {
+    text-align: center;
+    padding: 0;
+    margin: 1rem 0;
+    max-width: 720px;
   }
 `;
