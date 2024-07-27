@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { LandingPage } from './views/LandingPage';
 import { Sobre } from "./views/Sobre"
+import { NewProductPage } from "./components/containers/pageProduct/pageProduct"
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           
           <Route path='/formulario' element={<LandingPage />} />
 
+          <Route path="/novoproduto" element={<NewProductPage />} />
         </Routes>
 
       </Router>

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import fundo from '../../../assets/Fundo.png'; 
 
 export const HeaderContainer = styled.div`
   display: flex;
