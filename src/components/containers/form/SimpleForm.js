@@ -14,8 +14,12 @@ import { Input } from "../../../common/Input.js";
 import { Button } from "../../../common/Button.js";
 import { notification } from "antd";
 import { validateForm } from "../../../utils/validation.js";
+import { useNavigate } from "react-router-dom";
 
 export const SimpleForm = () => {
+
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     nomeCompleto: "",
     email: "",
@@ -49,6 +53,7 @@ export const SimpleForm = () => {
           message: "Sucesso",
           description: "Lead cadastrada com sucesso!",
         });
+        navigate("/novoproduto");
         setFormData({ nomeCompleto: "", email: "", telefone: "" });
       } catch (error) {
         notification.error({
