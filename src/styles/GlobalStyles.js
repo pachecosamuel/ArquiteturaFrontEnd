@@ -33,6 +33,16 @@ export const GlobalStyles = createGlobalStyle`
   button:hover {
     background-color: ${theme.colors.highlight};
   }
+
+  /* style.css ou index.css */
+
+  body.new-product-page {
+    background-image: url('../assets/Designer.jpeg'); /* Certifique-se de ajustar o caminho conforme necessário */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
 `;
 
 export default GlobalStyles;

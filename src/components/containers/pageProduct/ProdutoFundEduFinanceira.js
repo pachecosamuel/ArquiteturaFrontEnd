@@ -1,7 +1,28 @@
-import React from 'react';
-import { Container, Title, Subtitle, Paragraph, DownloadLink, Divider, ProductTitle, ProductDescription, BuyButton } from './styles';
+import { useEffect } from "react";
+import {
+  Container,
+  Title,
+  Subtitle,
+  Paragraph,
+  DownloadLink,
+  Divider,
+  ProductTitle,
+  ProductDescription,
+  BuyButton,
+} from "./styles";
+import BackgroundImage from "../../../assets/Designer.jpeg";
 
 export const NewProductPage = () => {
+
+  useEffect(() => {
+    document.body.classList.add('new-product-page');
+
+    return () => {
+      document.body.classList.remove('new-product-page');
+    };
+  }, []);
+
+
   return (
     <Container>
       <Title>Obrigado por se inscrever!</Title>
@@ -13,10 +34,18 @@ export const NewProductPage = () => {
         </DownloadLink>
       </Paragraph>
       <Divider />
-      <ProductTitle>E que tal prosperar financeiramente PRA SEMPRE?</ProductTitle>
+      <ProductTitle>
+        E que tal prosperar financeiramente PRA SEMPRE?
+      </ProductTitle>
       <ProductTitle>Aprenda Fundamentos da Educação Financeira</ProductTitle>
-      <ProductDescription>Adquira nosso novo infoproduto por apenas R$ 35,90.</ProductDescription>
-      <a href="URL_PARA_O_PRODUTO_NA_KIWIFY" target="_blank" rel="noopener noreferrer">
+      <ProductDescription>
+        Adquira nosso novo infoproduto por apenas R$ 35,90.
+      </ProductDescription>
+      <a
+        href="URL_PARA_O_PRODUTO_NA_KIWIFY"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <BuyButton>Comprar Agora</BuyButton>
       </a>
     </Container>
