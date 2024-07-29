@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import {
   Container,
   Title,
-  Subtitle,
   Paragraph,
   DownloadLink,
   Divider,
@@ -10,7 +9,6 @@ import {
   ProductDescription,
   BuyButton,
 } from "./styles";
-import BackgroundImage from "../../../assets/Designer.jpeg";
 
 export const NewProductPage = () => {
 

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import BackgroundImage from "../../../assets/Designer.jpeg";
 
 export const Container = styled.div`
   background: rgba(255, 255, 255, 0.9);
