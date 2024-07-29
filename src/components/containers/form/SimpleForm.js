@@ -51,14 +51,14 @@ export const SimpleForm = () => {
         await addDoc(collection(db, "lead"), formData);
         notification.success({
           message: "Sucesso",
-          description: "Lead cadastrada com sucesso!",
+          description: "Cadastrado com sucesso!",
         });
         navigate("/novoproduto");
         setFormData({ nomeCompleto: "", email: "", telefone: "" });
       } catch (error) {
         notification.error({
           message: "Erro",
-          description: "Falha ao cadastrar lead.",
+          description: "Falha ao cadastrar registrar.",
         });
       }
     } else {
