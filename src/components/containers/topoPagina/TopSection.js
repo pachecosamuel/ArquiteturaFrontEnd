@@ -8,13 +8,10 @@ import { TopContainer, FlexContainer, TextBox } from "./style";
         <FlexContainer>
           <Slide direction="up" triggerOnce>
             <TextBox>
-              <h2>Descubra sua melhor versão!</h2>
+              <h2>Transforme sua Vida Financeira agora!</h2>
               <p>
-                Preencha o formulário ao lado para receber nossa isca digital e
-                começar sua jornada de desenvolvimento pessoal. it to make a type
-                specimen book. It has survived not only five centuries, but also
-                the leap into electronic typesetting, remaining essentially
-                unchanged. 
+                Descubra 5 estratégias comprovadas para garantir uma renda extra com frequência. Não importando sua experiência ou capital 
+                inicial, este guia prático te levará do zero aos conhecimentos e passo iniciais para começar hoje e mudar seu futuro e de sua família!
               </p>
             </TextBox>
           </Slide>

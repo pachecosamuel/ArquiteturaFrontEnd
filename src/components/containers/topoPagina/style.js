@@ -38,6 +38,7 @@ export const FlexContainer = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
+    align-items: center;
   }
 
   @media (max-width: 1200px) {
@@ -79,7 +80,12 @@ export const FlexContainer = styled.div`
 export const TextBox = styled.div`
   flex: 1;
   text-align: center;
-  padding: 0 2rem;
+  align-items: flex-start;
+  /* padding: 0 0.1rem; */
+
+  @media (min-width: 1192px){
+    padding: 0 2rem;
+  }
 
   @media (min-width: 768px) and (max-width: 1024px) {
     max-width: 700px;

@@ -73,8 +73,8 @@ export const SimpleForm = () => {
     <ContactContainer>
       <TextContainer>
         <Slide direction="left" triggerOnce>
-          <h2>Entre em Contato</h2>
-          <p>Preencha o formulário abaixo para entrar em contato conosco.</p>
+          <h2>Acesse agora</h2>
+          <p>Preencha o formulário abaixo para ter acesso gratuito ao seu rico material</p>
         </Slide>
       </TextContainer>
       <Slide direction="right" triggerOnce>
