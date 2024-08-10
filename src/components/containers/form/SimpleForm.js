@@ -110,7 +110,7 @@ export const SimpleForm = () => {
             <Span>{errors.telefone}</Span>
           </Col>
           <ButtonContainer>
-            <Button type="submit">Enviar</Button>
+            <Button type="submit">Receber conteúdo gratuito</Button>
           </ButtonContainer>
         </FormGroup>
       </Slide>
