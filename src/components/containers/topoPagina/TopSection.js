@@ -10,8 +10,8 @@ import { TopContainer, FlexContainer, TextBox } from "./style";
             <TextBox>
               <h2>Transforme sua Vida Financeira agora!</h2>
               <p>
-                Descubra 5 estratégias comprovadas para garantir uma renda extra com frequência. Não importando sua experiência ou capital 
-                inicial, este guia prático te levará do zero aos conhecimentos e passo iniciais para começar hoje e mudar seu futuro e de sua família!
+              Não importando sua experiência ou capital 
+              inicial, este guia prático te levará do zero ao conhecimento necessário para começar hoje e mudar sua realidade financeira!
               </p>
             </TextBox>
           </Slide>

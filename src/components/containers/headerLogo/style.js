@@ -1,16 +1,22 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
-  border: 2px solid yellow;
   display: flex;
+  justify-content: space-around;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
+  height: 80px;
 
-  padding: 0.9rem;
+  margin: 0;
+  padding: 0;
 
   background: #023535;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 760px) {
+    justify-content: space-around;
+    height: 40px;
+  }
 
   p{
     margin-left: 1rem;
@@ -19,27 +25,25 @@ export const HeaderContainer = styled.div`
   }
 
   img {
-    width: 120px;
-    height: 120px;
+    width: 50px;
+    height: 50px;
+    animation: fadeIn 2s ease-in-out, slideIn 1s ease-out;
+
+    @media (min-width: 760px) {
+    width: 100px; 
+    height: 100px;
+  }
   }
 `;
 
-export const Title = styled.h1`
-  font-size: 2.5rem;
+export const Title = styled.h4`
   color: #fff;
   text-align: center;
   animation: fadeIn 2s ease-in-out, slideIn 1s ease-out;
-  border: 2px solid yellow;
-  background: linear-gradient(
-    90deg,
-    #faf7a0,
-    #faf7a0
-  ); 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 
-  @media (max-width: 768px) {
-    font-size: 2rem;
+
+  @media (min-width: 760px) {
+    font-size: 2rem; 
   }
 
   @keyframes fadeIn {
