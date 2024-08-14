@@ -66,7 +66,7 @@ export const FreeEbookText = styled.h2`
 
 export const DescriptionText = styled.p`
   font-size: 1rem;
-  text-align: center;
+  color: #fff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   
   @media (max-width: 760px) {
