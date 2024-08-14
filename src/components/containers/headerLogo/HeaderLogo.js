@@ -1,7 +1,4 @@
 import logo from '../../../assets/logo192.png'; 
-import image from '../../../assets/Bitcoin.png'; 
-import CapaBtc from '../../../assets/CapaBitcoin.png'; 
-
 import { HeaderContainer, Title} from "./style"
 
 

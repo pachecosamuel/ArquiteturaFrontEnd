@@ -19,8 +19,6 @@ export const HeaderContainer = styled.div`
     justify-content: space-around;
     padding: 40px;
     align-items: flex-start;
-
-
   }
 
   @media (min-width: 1080px) {
@@ -34,18 +32,31 @@ export const HeaderContainer = styled.div`
 
 export const TextContainer = styled.div`
   text-align: center;
-
-  @media (min-width: 760px) {
-    text-align: left;
-    max-width: 300px;
+  animation: fadeIn 2s alternate, slideIn 1s ease-out;
+  
+  @media (max-width: 760px) {
+    margin-bottom: 1rem;
   }
 `;
 
 export const FreeEbookText = styled.h2`
   font-size: 1.5rem;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #fff;
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+
+  /* Background geométrico */
+  background: linear-gradient(135deg, ${theme.colors.highlight} 100%, transparent 100%) -10px 10px; 
+              
+  background-size: 10px 10px;
+
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 0.3rem;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 0.3rem;
+  
+  background-position: top right, bottom left;
   
 
   @media (min-width: 760px) {
@@ -56,6 +67,7 @@ export const FreeEbookText = styled.h2`
 export const DescriptionText = styled.p`
   font-size: 1rem;
   text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   
   @media (max-width: 760px) {
     font-size: 1.2rem;
@@ -68,6 +80,8 @@ export const DescriptionText = styled.p`
 `;
 
 export const ImageContainer = styled.div`
+
+  animation: fadeIn 2s alternate, slideIn 1s ease-out;
 
   @media (min-width: 760px) {
     margin: 0 20px;
@@ -89,12 +103,19 @@ export const CoverImage = styled.img`
 
 export const ButtonContainer = styled.div`
   margin-top: 20px;
+
   align-items: end;
-  border: 1px solid black;
+  /* border: 1px solid red; */
 
   @media (min-width: 760px) {
-    margin-top: 0;
+    margin-top: 10rem;
   }
+
+  @media (min-width: 1024px) {
+    margin-top: 12.8rem;
+  }
+
+
 `;
 
 export const DownloadButton = styled.button`

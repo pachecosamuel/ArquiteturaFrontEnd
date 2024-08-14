@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { db } from "../../../firebaseConfig.js";
 import { collection, addDoc } from "firebase/firestore";
 import {
@@ -69,8 +69,19 @@ export const SimpleForm = () => {
     }
   };
 
+    // Função para adicionar classe de destaque
+    useEffect(() => {
+      const formElement = document.getElementById("simpleForm");
+      if (formElement) {
+        formElement.classList.add("highlight");
+        setTimeout(() => {
+          formElement.classList.remove("highlight");
+        }, 2000); // Duração do destaque
+      }
+    }, []);
+
   return (
-    <ContactContainer>
+    <ContactContainer id="simpleForm">
       <TextContainer>
         <Slide direction="left" triggerOnce>
           <h2>Acesse agora</h2>
@@ -78,7 +89,7 @@ export const SimpleForm = () => {
         </Slide>
       </TextContainer>
       <Slide direction="right" triggerOnce>
-        <FormGroup autoComplete="off" onSubmit={handleSubmit}>
+        <FormGroup autoComplete="off" onSubmit={handleSubmit} >
           <Col span={24}>
             <Input
               type="text"

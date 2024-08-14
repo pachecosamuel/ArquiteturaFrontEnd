@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../../styles/theme";
 
 export const ContactContainer = styled.div`
   padding: 1rem;
@@ -8,6 +9,25 @@ export const ContactContainer = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  &.highlight {
+    animation: highlight 2s ease-in-out;
+  }
+
+  @keyframes highlight {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px ${theme.colors.highlight};
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px ${theme.colors.highlight};
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px ${theme.colors.highlight};
+    }
+  }
   
 
   @media (max-width: 768px) {

@@ -12,18 +12,30 @@ import {
   DownloadButton } from "./style";
 
 export const Header = () => {
+
+  const scrollToForm = () => {
+    const formElement = document.getElementById("simpleForm");
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: "smooth" });
+      formElement.classList.add("highlight");
+      setTimeout(() => {
+        formElement.classList.remove("highlight");
+      }, 2000); // Duração do destaque
+    }
+  };
+
   return (
     <HeaderContainer>
       <TextContainer>
         <FreeEbookText>eBook Gratuito</FreeEbookText>
-        <DescriptionText>Descubra 5 estratégias eficientes para garantir renda extra. </DescriptionText>
+        <DescriptionText>Descubra 5 estratégias eficientes com o propósito de te iniciar na jornada da renda extra. </DescriptionText>
+        <ButtonContainer>
+          <DownloadButton onClick={scrollToForm} >Baixe Grátis Agora</DownloadButton>
+        </ButtonContainer>
       </TextContainer>
       <ImageContainer>
         <CoverImage src={TelaBtc} alt="Capa do eBook" />
       </ImageContainer>
-      <ButtonContainer>
-        <DownloadButton>Baixe Grátis Agora</DownloadButton>
-      </ButtonContainer>
     </HeaderContainer>
   );
 };
