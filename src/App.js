@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import { LandingPage } from './views/LandingPage';
 import { Sobre } from "./views/Sobre"
-import { VendaFundamentosEducacaoFinanceira } from "./views/VendaProdutoEntrada"
+import { LPFEF } from "./views/ProdutoFEF"
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
           
           <Route path='/formulario' element={<LandingPage />} />
 
-          <Route path="/novoproduto" element={<VendaFundamentosEducacaoFinanceira />} />
+          <Route path="/novoproduto" element={<LPFEF />} />
         </Routes>
       </Router>
     </div>
