@@ -39,7 +39,7 @@ export const TextContainer = styled.div`
   }
 `;
 
-export const FreeEbookText = styled.h2`
+export const TituloPagina = styled.h2`
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: #fff;

@@ -1,17 +1,18 @@
 // src/components/containers/Header/Header.js
 import React from "react";
-import TelaBtc from "../../../assets/TelaBtc.png"
-import { 
-  HeaderContainer, 
-  TextContainer, 
-  FreeEbookText, 
-  DescriptionText, 
-  ImageContainer, 
-  CoverImage, 
-  ButtonContainer, 
-  DownloadButton } from "./style";
+import PropTypes from "prop-types"; // Importação do PropTypes para validação das props
+import {
+  HeaderContainer,
+  TextContainer,
+  TituloPagina,
+  DescriptionText,
+  ImageContainer,
+  CoverImage,
+  ButtonContainer,
+  DownloadButton
+} from "./style";
 
-export const Header = () => {
+export const Header = ({ title, description, buttonText, imageUrl, onButtonClick }) => {
 
   const scrollToForm = () => {
     const formElement = document.getElementById("simpleForm");
@@ -27,19 +28,26 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <TextContainer>
-        <FreeEbookText>eBook Gratuito</FreeEbookText>
-        <DescriptionText>Descubra 5 estratégias eficientes com o propósito de te iniciar na jornada da renda extra. </DescriptionText>
+        <TituloPagina>{title}</TituloPagina>
+        <DescriptionText>{description}</DescriptionText>
         <ButtonContainer>
-          <DownloadButton onClick={scrollToForm} >Baixe Grátis Agora</DownloadButton>
+          <DownloadButton onClick={onButtonClick || scrollToForm}>{buttonText}</DownloadButton>
         </ButtonContainer>
       </TextContainer>
       <ImageContainer>
-        <CoverImage src={TelaBtc} alt="Capa do eBook" />
+        <CoverImage src={imageUrl} alt="Capa do eBook" />
       </ImageContainer>
     </HeaderContainer>
   );
 };
 
+// Define tipos para as props
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  buttonText: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  onButtonClick: PropTypes.func,
+};
+
 export default Header;
-
-

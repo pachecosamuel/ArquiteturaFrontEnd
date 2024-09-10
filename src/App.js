@@ -3,7 +3,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import { LandingPage } from './views/LandingPage';
+import { LandingPage } from './views/BaseLP';
 import { Sobre } from "./views/Sobre"
 import { LPFEF } from "./views/ProdutoFEF"
 
@@ -21,6 +21,7 @@ function App() {
           <Route path='/formulario' element={<LandingPage />} />
 
           <Route path="/novoproduto" element={<LPFEF />} />
+          
         </Routes>
       </Router>
     </div>
