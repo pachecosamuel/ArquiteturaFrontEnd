@@ -59,6 +59,7 @@ export const TextBox = styled.div`
     text-align: center;
     padding: 0;
     margin: 1rem 0;
+    max-width: 420px;
   }
 
   @media (min-width: 1024px) {

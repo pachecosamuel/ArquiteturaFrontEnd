@@ -15,8 +15,8 @@ import {
   TimelineItemContainer,
   IconContainer,
   ContentContainer,
-  ImageContainer,
-  DividerLine
+  ImageContainer, 
+  DividerLine 
 } from "./styles";
 
 const icons = {
@@ -31,13 +31,10 @@ const icons = {
   "VIII - Conclusões e reflexões": <FaComments />,
 };
 
-export const TimelineItem = ({ topic, description, image }) => {
+export const TimelineItem = ({ topic, description }) => {
   return (
     <TimelineItemContainer>
-      <ImageContainer>
-        <img src={image} alt={topic} />
-      </ImageContainer>
-      <DividerLine />
+      <IconContainer>{icons[topic] || <FaClipboardList />}</IconContainer>
       <ContentContainer>
         <h3>{topic}</h3>
         <p>{description}</p>

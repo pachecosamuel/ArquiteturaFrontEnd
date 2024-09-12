@@ -103,50 +103,6 @@ export const IconContainer = styled.div`
   }
 `;
 
-
-
-export const TimelineItemContainer = styled.div`
-  
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-  align-items: center;
-  width: 100%;
-  max-width: 600px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(
-    135deg, 
-    rgba(255, 255, 255, 0.9) 0%, 
-    rgba(240, 240, 240, 0.9) 100%
-  );
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease-in-out;
-  }
-
-  @media (min-width: 768px) {
-    padding: 30px;
-  }
-
-  @media (min-width: 1024px) {
-    padding: 40px;
-  }
-
-  @media (max-width: 768px) {
-    padding: 8px 0;
-    margin-bottom: 8px;
-  }
-
-  @media (min-width: 1024px) {
-    padding: 15px 0;
-    margin-bottom: 15px;
-  }
-`;
-
 export const ContentContainer = styled.div`
   align-items: center;
   padding-left: 0.2rem;
@@ -177,5 +133,69 @@ export const ContentContainer = styled.div`
     @media (min-width: 1024px) {
       font-size: 1rem;
     }
+  }
+`;
+
+export const TimelineItemContainer = styled.div`
+  
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+  animation: fadeIn 2s alternate, slideIn 1s ease-out;
+
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  text-align: left;
+
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* background-color: ${theme.colors.secondary}; */
+  background: linear-gradient(
+    135deg, 
+    rgba(255, 255, 255, 0.9) 0%, 
+    rgba(240, 240, 240, 0.9) 100%
+  );
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: rgba(240, 240, 240, 0.3);
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    transform: translate(20px, 20px);
+    z-index: -1;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+  }
+
+  @media (min-width: 768px) {
+    padding: 30px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 40px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 50px;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 8px 0;
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 15px 0;
+    margin-bottom: 15px;
   }
 `;

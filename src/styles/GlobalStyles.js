@@ -5,11 +5,13 @@ import { theme } from "./theme";
 
 export const GlobalStyles = createGlobalStyle`
   body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     font-family: ${theme.font.family};
     background-color: ${theme.colors.neutral};
     color: ${theme.colors.primary};
+
+    max-width: 1440px;
   }
 
   h1, h2, h3, h4, h5, h6 {

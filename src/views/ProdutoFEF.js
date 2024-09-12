@@ -6,6 +6,7 @@ import { FooterSection } from "../components/containers/footer/FooterSection"
 import { Header } from "../components/containers/header/Header"
 import { HeaderLogo } from "../components/containers/headerLogo/HeaderLogo"
 import { TimelineSection } from "../components/containers/timeLineSection/TimelineSection"
+import { VideoEmbed } from './../components/containers/videoEmbed/VideoEmbed';
 import SMV from "../assets/Fundo.png"
 
 const headerData = {
@@ -32,6 +33,10 @@ export const LPFEF = () => {
                 onButtonClick={headerData.onButtonClick}
             />
             {/* Adicione os outros componentes necessários aqui */}
+            <VideoEmbed
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Apresentação do Curso Prosperando com Educação Financeira"
+            />
             <TopSection />
             <AboutSection />
             <TimelineSection />
