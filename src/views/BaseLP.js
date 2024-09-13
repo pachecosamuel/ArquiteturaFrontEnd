@@ -6,6 +6,7 @@ import { FooterSection } from "../components/containers/footer/FooterSection"
 import { Header } from "../components/containers/header/Header"
 import { HeaderLogo } from "../components/containers/headerLogo/HeaderLogo"
 import { TimelineSection } from "../components/containers/timeLineSection/TimelineSection"
+import { TimelineSectionSimples } from "../components/containers/timeLineSection/TimelineSectionSimples"
 // import TelaBtc from "../../../assets/TelaBtc.png"
 import TelaBtc from "../assets/TelaBtc.png"
 
@@ -43,7 +44,7 @@ export const LandingPage = () => {
                     onButtonClick={headerData.onButtonClick}
                 />
                 <TopSection />
-                <TimelineSection />
+                <TimelineSectionSimples />
                 <AboutSection />
                 <FooterSection />
             </Content>
