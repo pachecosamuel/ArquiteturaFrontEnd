@@ -41,6 +41,7 @@ export const LPFEF = () => {
 
     return (
         <>
+            <HeaderLogo />
             <Header
                 title={headerData.title}
                 description={headerData.description}
@@ -53,7 +54,7 @@ export const LPFEF = () => {
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ"
                 title="Apresentação do Curso Prosperando com Educação Financeira"
             />
-            <TopSection />
+            {/* <TopSection /> */}
             <AboutSection />
             <LinhaDoTempo
                 data={data}
