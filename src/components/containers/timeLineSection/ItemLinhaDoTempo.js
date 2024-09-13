@@ -1,19 +1,8 @@
 // src/components/Timeline/TimelineItem.js
 import React from "react";
-import {
-  FaLightbulb,
-  FaDollarSign,
-  FaClipboardList,
-  FaChartLine,
-  FaShoppingCart,
-  FaPenNib,
-  FaShareAlt,
-  FaLaptop,
-  FaComments,
-} from "react-icons/fa";
+
 import {
   TimelineItemContainer,
-  IconContainer,
   ContentContainer,
   ImageContainer,
   DividerLine
