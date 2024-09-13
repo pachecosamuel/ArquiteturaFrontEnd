@@ -5,8 +5,8 @@ import { AboutSection } from "../components/containers/about/AboutSection"
 import { FooterSection } from "../components/containers/footer/FooterSection"
 import { Header } from "../components/containers/header/Header"
 import { HeaderLogo } from "../components/containers/headerLogo/HeaderLogo"
-import { TimelineSection } from "../components/containers/timeLineSection/TimelineSection"
-import { TimelineSectionSimples } from "../components/containers/timeLineSection/TimelineSectionSimples"
+import { TimelineSection } from "../components/containers/timeLineSection/LinhaDoTempo"
+import { LinhaDoTempoSimples } from "../components/containers/timeLineSection/LinhaDoTempoSimples"
 // import TelaBtc from "../../../assets/TelaBtc.png"
 import TelaBtc from "../assets/TelaBtc.png"
 
@@ -31,6 +31,18 @@ const headerData = {
     onButtonClick: scrollToForm
 };
 
+const DataToTimeline = [
+    { topic: "I - Passo zero", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the " },
+    { topic: "II - O que é e qual a relevância de renda extra", description: "" },
+    { topic: "III - Tipos de renda extra", description: "" },
+    { topic: "IV - Renda 1 - Investimentos", description: "" },
+    { topic: "V - Renda 2 - Venda de infoprodutos e produtos", description: "" },
+    { topic: "VI - Renda 3 - Criação de conteúdo", description: "" },
+    { topic: "VI - Renda 4 - Economia compartilhada", description: "" },
+    { topic: "VII - Renda 5 - Trabalho freelancer", description: "" },
+    { topic: "VIII - Conclusões e reflexões", description: "" },
+];
+
 export const LandingPage = () => {
     return (
         <Layout>
@@ -44,7 +56,9 @@ export const LandingPage = () => {
                     onButtonClick={headerData.onButtonClick}
                 />
                 <TopSection />
-                <TimelineSectionSimples />
+                <LinhaDoTempoSimples 
+                    data={DataToTimeline}
+                />
                 <AboutSection />
                 <FooterSection />
             </Content>

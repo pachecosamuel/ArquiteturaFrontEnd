@@ -29,7 +29,7 @@ const icons = {
     "VIII - Conclusões e reflexões": <FaComments />,
 };
 
-export const TimelineItemSimples = ({ topic, description }) => {
+export const ItemDaLinhaDoTempoSimples = ({ topic, description }) => {
     return (
         <TimelineItemContainer>
             <IconContainer>{icons[topic] || <FaClipboardList />}</IconContainer>
@@ -41,4 +41,4 @@ export const TimelineItemSimples = ({ topic, description }) => {
     );
 };
 
-export default TimelineItemSimples;
+export default ItemDaLinhaDoTempoSimples;

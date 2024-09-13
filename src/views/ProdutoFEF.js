@@ -5,7 +5,7 @@ import { AboutSection } from "../components/containers/about/AboutSection"
 import { FooterSection } from "../components/containers/footer/FooterSection"
 import { Header } from "../components/containers/header/Header"
 import { HeaderLogo } from "../components/containers/headerLogo/HeaderLogo"
-import { TimelineSection } from "../components/containers/timeLineSection/TimelineSection"
+import { LinhaDoTempo } from "../components/containers/timeLineSection/LinhaDoTempo"
 import { VideoEmbed } from './../components/containers/videoEmbed/VideoEmbed';
 import SMV from "../assets/Fundo.png"
 
@@ -39,7 +39,7 @@ export const LPFEF = () => {
             />
             <TopSection />
             <AboutSection />
-            <TimelineSection />
+            <LinhaDoTempo />
             <FooterSection />
         </>
     )

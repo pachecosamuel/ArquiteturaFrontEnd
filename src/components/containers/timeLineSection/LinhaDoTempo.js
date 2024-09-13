@@ -5,7 +5,7 @@ import {
   TextContainer,
   DescriptionText,
 } from "./styles";
-import { TimelineItem } from "./TimelineItem";
+import { ItemDaLinhaDoTempo } from "./ItemLinhaDoTempo";
 import logo from '../../../assets/logo192.png'; 
 import btc from '../../../assets/Bitcoin.png'; 
 
@@ -22,17 +22,18 @@ const timelineData = [
   ];
 
 
-export const TimelineSection = () => {
+export const LinhaDoTempo = () => {
   return (
     <TimelineContainer>
         <TextContainer>
             <DescriptionText>A sua jornada em 8 passos. </DescriptionText>
         </TextContainer>
       {timelineData.map((item, index) => (
-        <TimelineItem key={index} topic={item.topic} description={item.description} image={item.image} />
+        <ItemDaLinhaDoTempo key={index} topic={item.topic} description={item.description} image={item.image} />
       ))}
     </TimelineContainer>
   );
 };
 
-export default TimelineSection;
+
+export default LinhaDoTempo;
