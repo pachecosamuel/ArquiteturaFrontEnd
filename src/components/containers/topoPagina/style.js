@@ -67,6 +67,18 @@ export const FlexContainer = styled.div`
       max-width: 100%;
       border: none;
       border-radius: 10px;
+
+      @media (min-width: 768px) {
+        width: 720px;
+        height: 480px;
+        /* margin-top: 1rem;
+        height: 100%; */
+      }
+      @media (max-width: 768px) {
+        width: 720px;
+        /* margin-top: 1rem;
+        height: 100%; */
+      }
     }
 
     @media (max-width: 1201px) {

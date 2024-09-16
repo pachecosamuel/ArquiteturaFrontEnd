@@ -51,7 +51,7 @@ export const LPFEF = () => {
             />
             {/* Adicione os outros componentes necessários aqui */}
             <VideoEmbed
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                src="https://www.youtube.com/embed/OJ2nZlPbkcU"
                 title="Apresentação do Curso Prosperando com Educação Financeira"
             />
             {/* <TopSection /> */}

@@ -30,6 +30,11 @@ export const ContactContainer = styled.div`
   }
   
 
+  @media (min-width: 1200px) {
+    padding-top: 0.5rem 1rem 1rem 1rem;
+    /* padding: 1rem; */
+  }
+
   @media (max-width: 768px) {
     padding: 1rem;
   }
@@ -37,7 +42,7 @@ export const ContactContainer = styled.div`
 
 export const TextContainer = styled.div`
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   h2 {
     font-size: 2.5rem;

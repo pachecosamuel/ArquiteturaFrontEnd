@@ -7,7 +7,7 @@ export const HeaderContainer = styled.div`
   align-items: center;
 
   padding: 20px;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   
   background-color: ${theme.colors.primary};
   color: #fff;

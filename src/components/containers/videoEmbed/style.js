@@ -1,4 +1,29 @@
 import styled from "styled-components";
+import {theme} from "../../../styles/theme";
+
+// Wrapper para aplicar bordas e espaçamento
+export const VideoWrapper = styled.div`
+  /* display: flex;
+  justify-content: center;
+  align-items: center;  */
+  border: 10px solid black;
+  border-radius: 12px;
+  background: ${theme.colors.backgroundSecondary};
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+
+  /* Efeito de slide */
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1s forwards ease-out;
+
+  @keyframes slideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`;
 
 export const VideoContainer = styled.div`
   position: relative;
@@ -6,19 +31,7 @@ export const VideoContainer = styled.div`
   overflow: hidden;
   max-width: 100%;
   height: auto;
-  margin: 20px 0;
 
-  @media (min-width: 768px) {
-    padding-top: 45%; /* Ajuste para tablets */
-  }
-
-  @media (min-width: 1024px) {
-    padding-top: 40%; /* Ajuste para desktops */
-  }
-
-  @media (min-width: 1920px) {
-    padding-top: 30%; /* Ajuste para telas maiores */
-  }
 `;
 
 export const Iframe = styled.iframe`
@@ -28,4 +41,5 @@ export const Iframe = styled.iframe`
   width: 100%;
   height: 100%;
   border: none;
+  border-radius: 12px;
 `;
