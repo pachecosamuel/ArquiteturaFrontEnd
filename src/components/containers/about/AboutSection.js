@@ -1,9 +1,10 @@
 // src/components/containers/AboutSection.js
 
-import React from "react";
-import { Slide } from "react-awesome-reveal";
-import profileImagem from "../../../assets/Profile.jpg";
 import { AboutContainer, FlexContainer, TextBox } from "./style";
+import profilePalestra from "../../../assets/Palestra.png"
+import profileImagem from "../../../assets/Profile.jpg";
+import { Slide } from "react-awesome-reveal";
+import React from "react";
 
 export const AboutSection = () => {
   return (
@@ -29,6 +30,17 @@ export const AboutSection = () => {
             width={350}
             height={450}
           />
+
+          <link to=""></link>
+        </Slide>
+        <Slide direction="right" triggerOnce>
+          <img
+            src={profilePalestra}
+            alt="Minha foto profissional"
+            width={350}
+            height={450}
+          />
+
           <link to=""></link>
         </Slide>
       </FlexContainer>

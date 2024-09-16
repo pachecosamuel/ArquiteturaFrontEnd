@@ -1,6 +1,3 @@
-import { NewProductPage } from "../components/containers/pageProduct/ProdutoFundEduFinanceira"
-import { Layout } from "antd";
-import { TopSection } from "../components/containers/topoPagina/TopSection"
 import { AboutSection } from "../components/containers/about/AboutSection"
 import { FooterSection } from "../components/containers/footer/FooterSection"
 import { Header } from "../components/containers/header/Header"
@@ -55,10 +52,10 @@ export const LPFEF = () => {
                 title="Apresentação do Curso Prosperando com Educação Financeira"
             />
             {/* <TopSection /> */}
-            <AboutSection />
             <LinhaDoTempo
                 data={data}
             />
+            <AboutSection />
             <FooterSection />
         </>
     )
