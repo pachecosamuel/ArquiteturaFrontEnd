@@ -11,10 +11,10 @@ export const AboutContainer = styled.div`
   h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    text-align: center;
 
     @media (max-width: 768px) {
       font-size: 2rem;
-      text-align: center;
     }
   }
 
@@ -37,10 +37,10 @@ export const AboutContainer = styled.div`
 
 export const FlexContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   
 
   @media (max-width: 768px) {
@@ -52,18 +52,18 @@ export const FlexContainer = styled.div`
 
 export const TextBox = styled.div`
   flex: 1;
-  text-align: left;
+  text-align: justify;
   padding: 0 2rem;
 
   @media (max-width: 768px) {
-    text-align: center;
+    text-align: justify;
     padding: 0;
     margin: 1rem 0;
     max-width: 420px;
   }
 
   @media (min-width: 1024px) {
-    text-align: center;
+    text-align: justify;
     padding: 0;
     margin: 1rem 0;
     max-width: 720px;
