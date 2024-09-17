@@ -7,6 +7,7 @@ import { VideoEmbed } from './../components/containers/videoEmbed/VideoEmbed';
 import SMV from "../assets/Fundo.png"
 import logo from "../assets/logo192.png"
 import btc from "../assets/Bitcoin.png"
+import provaSocial from "../assets/provaSocial.gif"
 
 import profilePalestra from "../assets/Palestra.png"
 import profileImagem from "../assets/Profile.jpg"
@@ -67,7 +68,7 @@ export const LPFEF = () => {
                 educação, em sua escola SMV - Sua Melhor Versão, o propósito de
                 impacto social, educação contínua e transformação de vida."
                 imageUrl={profilePalestra}
-                imageUrl2={profileImagem}
+                imageUrl2={provaSocial}
             />
             <FooterSection />
         </>

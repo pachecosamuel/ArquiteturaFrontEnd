@@ -91,9 +91,22 @@ export const FlexContainer = styled.div`
 
 export const TextBox = styled.div`
   flex: 1;
-  text-align: center;
+  text-align: justify;
   align-items: flex-start;
-  /* padding: 0 0.1rem; */
+
+  @media (max-width: 768px) {
+    text-align: justify;
+    padding: 0;
+    margin: 1rem 0;
+    max-width: 420px;
+  }
+
+  @media (min-width: 1024px) {
+    text-align: justify;
+    padding: 0;
+    margin: 1rem 0;
+    max-width: 720px;
+  }
 
   @media (min-width: 1192px){
     padding: 0 2rem;
