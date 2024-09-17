@@ -1,8 +1,9 @@
 // src/components/containers/AboutSection.js
 
-import { AboutContainer, FlexContainer, TextBox } from "./style";
+import { AboutContainer, FlexContainer, TextBox, Image } from "./style";
 import profilePalestra from "../../../assets/Palestra.png"
 import profileImagem from "../../../assets/Profile.jpg";
+import btc from "../../../assets/Bitcoin.png";
 import { Slide } from "react-awesome-reveal";
 import React from "react";
 
@@ -23,26 +24,23 @@ export const AboutSection = () => {
             </p>
           </TextBox>
         </Slide>
-        <Slide direction="right" triggerOnce>
-          <img
-            src={profileImagem}
-            alt="Minha foto profissional"
-            width={350}
-            height={450}
-          />
 
-          <link to=""></link>
-        </Slide>
         <Slide direction="right" triggerOnce>
-          <img
+          <Image
+            src={btc}
+            alt="Minha foto profissional"
+          />
+        </Slide>
+
+        <Slide direction="right" triggerOnce>
+          <Image
             src={profilePalestra}
             alt="Minha foto profissional"
-            width={350}
-            height={450}
           />
-
-          <link to=""></link>
         </Slide>
+
+
+
       </FlexContainer>
     </AboutContainer>
   );

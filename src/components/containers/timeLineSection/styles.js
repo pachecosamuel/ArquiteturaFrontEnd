@@ -24,6 +24,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const TextContainer = styled.div`
+    text-align: center;
     display: flex;
     justify-content: center;
     line-height: 1rem;
@@ -76,8 +77,9 @@ export const DescriptionText = styled.p`
 `;
 
 export const TimelineContainer = styled.div`
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
   padding: 0.5rem;
+  padding-bottom: 2rem;
 
   display: flex;
   flex-direction: column;

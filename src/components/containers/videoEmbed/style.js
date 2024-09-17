@@ -6,7 +6,8 @@ export const VideoWrapper = styled.div`
   /* display: flex;
   justify-content: center;
   align-items: center;  */
-  border: 10px solid black;
+  margin-top: 0.5rem;
+  border: 5px solid black;
   border-radius: 12px;
   background: ${theme.colors.backgroundSecondary};
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
