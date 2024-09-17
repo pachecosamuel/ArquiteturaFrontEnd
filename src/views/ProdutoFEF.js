@@ -8,6 +8,11 @@ import SMV from "../assets/Fundo.png"
 import logo from "../assets/logo192.png"
 import btc from "../assets/Bitcoin.png"
 
+import profilePalestra from "../assets/Palestra.png"
+import profileImagem from "../assets/Profile.jpg"
+
+
+
 const headerData = {
     title: "Curso de Educação Financeira",
     description: "Aprenda a gerenciar suas finanças pessoais e construa um futuro financeiro sólido.",
@@ -18,7 +23,6 @@ const headerData = {
         console.log("Button clicked!");
     }
 };
-
 
 
 const data = [
@@ -55,7 +59,16 @@ export const LPFEF = () => {
             <LinhaDoTempo
                 data={data}
             />
-            <AboutSection />
+            <AboutSection
+                paragrafo="Samuel Pacheco, fundador da SMV, formado em Gestão da Tecnologia
+                da Informação e com pós-graduação em Engenharia de Software pela
+                universidade PUC Minas. Hoje, após 8 anos de estudos,
+                qualificações e mercado de trabalho, buscar difundir através da
+                educação, em sua escola SMV - Sua Melhor Versão, o propósito de
+                impacto social, educação contínua e transformação de vida."
+                imageUrl={profilePalestra}
+                imageUrl2={profileImagem}
+            />
             <FooterSection />
         </>
     )

@@ -7,10 +7,17 @@ import { Header } from "../components/containers/header/Header"
 import { HeaderLogo } from "../components/containers/headerLogo/HeaderLogo"
 import { LinhaDoTempoSimples } from "../components/containers/timeLineSection/LinhaDoTempoSimples"
 // import TelaBtc from "../../../assets/TelaBtc.png"
+
+import { theme } from "../styles/theme";
+
+import profilePalestra from "../assets/Palestra.png"
+import profileImagem from "../assets/Profile.jpg"
+
+
 import TelaBtc from "../assets/TelaBtc.png"
-import { 
-    FaLightbulb, FaDollarSign, FaClipboardList, FaChartLine, 
-    FaShoppingCart, FaPenNib, FaShareAlt, FaLaptop, FaComments 
+import {
+    FaLightbulb, FaDollarSign, FaClipboardList, FaChartLine,
+    FaShoppingCart, FaPenNib, FaShareAlt, FaLaptop, FaComments
 } from "react-icons/fa";
 
 const { Content } = Layout;
@@ -59,10 +66,27 @@ export const LandingPage = () => {
                     onButtonClick={headerData.onButtonClick}
                 />
                 <TopSection />
-                <LinhaDoTempoSimples 
+                <LinhaDoTempoSimples
                     data={DataToTimeline}
                 />
-                <AboutSection />
+                <AboutSection
+                    imageUrl={profilePalestra}
+                    imageUrl2={profileImagem}
+
+                    paragrafo="Samuel Pacheco, fundador da SMV, formado em Gestão da Tecnologia
+                                da Informação e com pós-graduação em Engenharia de Software pela
+                                universidade PUC Minas. Hoje, após 8 anos de estudos,
+                                qualificações e mercado de trabalho, buscar difundir através da
+                                educação, em sua escola SMV - Sua Melhor Versão, o propósito de
+                                impacto social, educação contínua e transformação de vida."
+                    
+
+                    titleColor="#333"
+                    titleHoverColor={theme.colors.highlight}
+                    // paragraphBgColor="rgba(91, 155, 213, 0.1)"
+                    // paragraphHoverBgColor="rgba(91, 155, 213, 0.3)"
+                    // backgroundColor="#f0f0f0"
+                />
                 <FooterSection />
             </Content>
         </Layout>

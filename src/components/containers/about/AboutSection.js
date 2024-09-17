@@ -1,45 +1,59 @@
 // src/components/containers/AboutSection.js
 
 import { AboutContainer, FlexContainer, TextBox, Image } from "./style";
-import profilePalestra from "../../../assets/Palestra.png"
-import profileImagem from "../../../assets/Profile.jpg";
-import btc from "../../../assets/Bitcoin.png";
 import { Slide } from "react-awesome-reveal";
 import React from "react";
 
-export const AboutSection = () => {
+export const AboutSection = ({
+  paragrafo,
+  imageUrl,
+  imageUrl2,
+  title = "Default Title",
+  titleColor,
+  titleHoverColor,
+  paragraphText = "Default paragraph text",
+  paragraphBgColor,
+  paragraphHoverBgColor,
+  backgroundColor,
+}) => {
+
+  // Efeito de animação
+  React.useEffect(() => {
+    document.querySelector('.about-container').classList.add('animate');
+  }, []);
+
   return (
-    <AboutContainer>
+    <AboutContainer
+      className="about-container"
+      titleColor={titleColor}
+      titleHoverColor={titleHoverColor}
+      paragraphBgColor={paragraphBgColor}
+      paragraphHoverBgColor={paragraphHoverBgColor}
+      backgroundColor={backgroundColor}
+    >
       <FlexContainer>
         <Slide direction="left" triggerOnce>
           <TextBox>
             <h2>Sobre Mim</h2>
             <p>
-              Samuel Pacheco, fundador da SMV, formado em Gestão da Tecnologia
-              da Informação e com pós-graduação em Engenharia de Software pela
-              universidade PUC Minas. Hoje, após 8 anos de estudos,
-              qualificações e mercado de trabalho, buscar difundir através da
-              educação, em sua escola SMV - Sua Melhor Versão, o propósito de
-              impacto social, educação contínua e transformação de vida.
+              {paragrafo}
             </p>
           </TextBox>
         </Slide>
 
         <Slide direction="right" triggerOnce>
           <Image
-            src={btc}
+            src={imageUrl}
             alt="Minha foto profissional"
           />
         </Slide>
 
         <Slide direction="right" triggerOnce>
           <Image
-            src={profilePalestra}
+            src={imageUrl2}
             alt="Minha foto profissional"
           />
         </Slide>
-
-
 
       </FlexContainer>
     </AboutContainer>
@@ -47,3 +61,4 @@ export const AboutSection = () => {
 };
 
 export default AboutSection;
+
