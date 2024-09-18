@@ -11,25 +11,31 @@ import PassoUm from "../assets/PassoUm.png"
 import profilePalestra from "../assets/Palestra.png"
 import profileImagem from "../assets/Profile.jpg"
 
-import  Um from "../assets/FEFtimeline/1.png"
-import Dois from "../assets/FEFtimeline/2.png"
-import Tres from "../assets/FEFtimeline/3.png"
-import Quatro from "../assets/FEFtimeline/4.png"
-import Cinco from "../assets/FEFtimeline/5.png"
-import Seis from "../assets/FEFtimeline/6.png"
-import Sete from "../assets/FEFtimeline/7.png"
+import Capa from "../assets/FEF/CapaFEF.png"
+import Um from "../assets/FEF/1.png"
+import Dois from "../assets/FEF/2.png"
+import Tres from "../assets/FEF/3.png"
+import Quatro from "../assets/FEF/4.png"
+import Cinco from "../assets/FEF/5.png"
+import Seis from "../assets/FEF/6.png"
+import Sete from "../assets/FEF/7.png"
 
 
 
 const headerData = {
-    title: "Curso de Educação Financeira",
-    description: "Aprenda a gerenciar suas finanças pessoais e construa um futuro financeiro sólido.",
+    title: "Maior renda, sucesso profissional e realização de objetivos.",
+    description: "Pesquisa da (OECD) revelou que trabalhadores com maior alfabetização financeira tendem a ter salários mais altos, participam mais de programas de previdência privada e apresentam maior estabilidade no emprego e na vida.",
     buttonText: "Inscreva-se Agora",
-    imageUrl: SMV, // URL dinâmica da imagem
+    imageUrl: Capa, // URL dinâmica da imagem
     onButtonClick: () => {
         // Função personalizada para o clique do botão
         console.log("Button clicked!");
-    }
+    },
+    backgroundColor: "#f8f9fa", // Nova cor de fundo
+    textColor: "#000",          // Nova cor de texto
+    shadowColor: "rgba(0, 0, 0, 0.2)", // Cor da sombra
+    buttonColor: "#28a745",     // Cor do botão
+    buttonHoverColor: "#218838" // Cor do botão no hover
 };
 
 
@@ -55,6 +61,11 @@ export const LPFEF = () => {
                 buttonText={headerData.buttonText}
                 imageUrl={headerData.imageUrl}
                 onButtonClick={headerData.onButtonClick}
+                // backgroundColor={headerData.backgroundColor}
+                // textColor={headerData.textColor}
+                // shadowColor={headerData.shadowColor}
+                // buttonColor={headerData.buttonColor}
+                // buttonHoverColor={headerData.buttonHoverColor}
             />
             {/* Adicione os outros componentes necessários aqui */}
             <VideoEmbed

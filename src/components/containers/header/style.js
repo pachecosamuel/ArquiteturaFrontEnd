@@ -5,13 +5,12 @@ export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  justify-content: center;
   padding: 20px;
-  /* margin-bottom: 2rem; */
   
-  background-color: ${theme.colors.primary};
+  background-color: ${({ backgroundColor }) => backgroundColor || theme.colors.primary};
   color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px ${({ shadowColor }) => shadowColor || 'rgba(0, 0, 0, 0.1)'};
   text-shadow: black;
 
   @media (min-width: 760px) {
@@ -28,6 +27,8 @@ export const HeaderContainer = styled.div`
       align-items: end;
     }
   }
+
+
 `;
 
 export const TextContainer = styled.div`
@@ -42,9 +43,10 @@ export const TextContainer = styled.div`
 export const TituloPagina = styled.h2`
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #fff;
-  text-align: center;
+  color: ${({ textColor }) => textColor || '#fff'};
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  text-align: justify;
+  padding: 0.3rem;
 
   /* Background geométrico */
   background: linear-gradient(135deg, ${theme.colors.highlight} 100%, transparent 100%) -10px 10px; 
@@ -66,8 +68,9 @@ export const TituloPagina = styled.h2`
 
 export const DescriptionText = styled.p`
   font-size: 1rem;
-  color: #fff;
+  color: ${({ textColor }) => textColor || '#fff'};
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  text-align: justify;
   
   @media (max-width: 760px) {
     font-size: 1.2rem;
@@ -85,6 +88,10 @@ export const ImageContainer = styled.div`
 
   @media (min-width: 760px) {
     margin: 0 20px;
+  }
+
+  @media (max-width: 760px) {
+    margin-top: 1rem;
   }
 `;
 
@@ -105,7 +112,6 @@ export const ButtonContainer = styled.div`
   margin-top: 20px;
 
   align-items: end;
-  /* border: 1px solid red; */
 
   @media (min-width: 760px) {
     margin-top: 10rem;
@@ -115,18 +121,21 @@ export const ButtonContainer = styled.div`
     margin-top: 12.8rem;
   }
 
+  @media (max-width: 760px) {
+    margin-top: 2rem;
+  }
 
 `;
 
 export const DownloadButton = styled.button`
   padding: 10px 20px;
   font-size: 1rem;
-  background-color: ${theme.colors.highlight};
+  background-color: ${({ buttonColor }) => buttonColor || theme.colors.highlight};
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
 
   &:hover {
-    background-color: ${theme.colors.secondary};
+    background-color: ${({ buttonHoverColor }) => buttonHoverColor || theme.colors.secondary};
   }
 `;

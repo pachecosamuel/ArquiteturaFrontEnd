@@ -12,7 +12,17 @@ import {
   DownloadButton
 } from "./style";
 
-export const Header = ({ title, description, buttonText, imageUrl, onButtonClick }) => {
+export const Header = ({ 
+  title, 
+  description, 
+  buttonText, 
+  imageUrl, 
+  onButtonClick,   
+  backgroundColor,
+  textColor,
+  shadowColor,
+  buttonColor,
+  buttonHoverColor }) => {
 
   const scrollToForm = () => {
     const formElement = document.getElementById("simpleForm");
@@ -26,17 +36,31 @@ export const Header = ({ title, description, buttonText, imageUrl, onButtonClick
   };
 
   return (
-    <HeaderContainer>
+    <HeaderContainer backgroundColor={backgroundColor} shadowColor={shadowColor}>
+
       <TextContainer>
-        <TituloPagina>{title}</TituloPagina>
-        <DescriptionText>{description}</DescriptionText>
+
+        <TituloPagina textColor={textColor} >{title}</TituloPagina>
+
+        <DescriptionText textColor={textColor} > {description}</DescriptionText>
+
         <ButtonContainer>
-          <DownloadButton onClick={onButtonClick || scrollToForm}>{buttonText}</DownloadButton>
+
+          <DownloadButton 
+          buttonColor={buttonColor}
+          buttonHoverColor={buttonHoverColor}
+          onClick={onButtonClick || scrollToForm}>
+            {buttonText}
+          </DownloadButton>
+
         </ButtonContainer>
+
       </TextContainer>
+
       <ImageContainer>
         <CoverImage src={imageUrl} alt="Capa do eBook" />
       </ImageContainer>
+
     </HeaderContainer>
   );
 };
@@ -48,6 +72,11 @@ Header.propTypes = {
   buttonText: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
   onButtonClick: PropTypes.func,
+  backgroundColor: PropTypes.string, 
+  textColor: PropTypes.string,       
+  shadowColor: PropTypes.string,     
+  buttonColor: PropTypes.string,     
+  buttonHoverColor: PropTypes.string 
 };
 
 export default Header;

@@ -38,7 +38,12 @@ const headerData = {
     description: "Descubra 5 estratégias eficientes com o propósito de te iniciar na jornada da renda extra. ",
     buttonText: "Baixe Grátis Agora",
     imageUrl: TelaBtc, // URL dinâmica da imagem
-    onButtonClick: scrollToForm
+    onButtonClick: scrollToForm,
+    backgroundColor: "#f8f9fa", // Nova cor de fundo
+    textColor: "#000",          // Nova cor de texto
+    shadowColor: "rgba(0, 0, 0, 0.2)", // Cor da sombra
+    buttonColor: "#28a745",     // Cor do botão
+    buttonHoverColor: "#218838" // Cor do botão no hover
 };
 
 const DataToTimeline = [
@@ -64,6 +69,11 @@ export const LandingPage = () => {
                     buttonText={headerData.buttonText}
                     imageUrl={headerData.imageUrl}
                     onButtonClick={headerData.onButtonClick}
+                    // backgroundColor={headerData.backgroundColor}
+                    // textColor={headerData.textColor}
+                    // shadowColor={headerData.shadowColor}
+                    // buttonColor={headerData.buttonColor}
+                    // buttonHoverColor={headerData.buttonHoverColor}
                 />
                 <TopSection />
                 <LinhaDoTempoSimples
@@ -79,13 +89,13 @@ export const LandingPage = () => {
                                 qualificações e mercado de trabalho, buscar difundir através da
                                 educação, em sua escola SMV - Sua Melhor Versão, o propósito de
                                 impacto social, educação contínua e transformação de vida."
-                    
+
 
                     titleColor="#333"
                     titleHoverColor={theme.colors.highlight}
-                    // paragraphBgColor="rgba(91, 155, 213, 0.1)"
-                    // paragraphHoverBgColor="rgba(91, 155, 213, 0.3)"
-                    // backgroundColor="#f0f0f0"
+                // paragraphBgColor="rgba(91, 155, 213, 0.1)"
+                // paragraphHoverBgColor="rgba(91, 155, 213, 0.3)"
+                // backgroundColor="#f0f0f0"
                 />
                 <FooterSection />
             </Content>
