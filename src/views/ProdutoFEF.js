@@ -5,12 +5,19 @@ import { HeaderLogo } from "../components/containers/headerLogo/HeaderLogo"
 import { LinhaDoTempo } from "../components/containers/timeLineSection/LinhaDoTempo"
 import { VideoEmbed } from './../components/containers/videoEmbed/VideoEmbed';
 import SMV from "../assets/Fundo.png"
-import logo from "../assets/logo192.png"
-import btc from "../assets/Bitcoin.png"
 import provaSocial from "../assets/provaSocial.gif"
+import PassoUm from "../assets/PassoUm.png"
 
 import profilePalestra from "../assets/Palestra.png"
 import profileImagem from "../assets/Profile.jpg"
+
+import  Um from "../assets/FEFtimeline/1.png"
+import Dois from "../assets/FEFtimeline/2.png"
+import Tres from "../assets/FEFtimeline/3.png"
+import Quatro from "../assets/FEFtimeline/4.png"
+import Cinco from "../assets/FEFtimeline/5.png"
+import Seis from "../assets/FEFtimeline/6.png"
+import Sete from "../assets/FEFtimeline/7.png"
 
 
 
@@ -27,15 +34,13 @@ const headerData = {
 
 
 const data = [
-    { topic: "I - Passo zero", description: "", image: logo },
-    { topic: "II - O que é e qual a relevância de renda extra", description: "", image: btc },
-    // { topic: "III - Tipos de renda extra", description: "" },
-    // { topic: "IV - Renda 1 - Investimentos", description: "" },
-    // { topic: "V - Renda 2 - Venda de infoprodutos e produtos", description: "" },
-    // { topic: "VI - Renda 3 - Criação de conteúdo", description: "" },
-    // { topic: "VI - Renda 4 - Economia compartilhada", description: "" },
-    // { topic: "VII - Renda 5 - Trabalho freelancer", description: "" },
-    // { topic: "VIII - Conclusões e reflexões", description: "" },
+    { topic: "I - Passo zero", description: "", image: Um },
+    { topic: "I - Passo zero", description: "", image: Dois },
+    { topic: "I - Passo zero", description: "", image: Tres },
+    { topic: "I - Passo zero", description: "", image: Quatro },
+    { topic: "I - Passo zero", description: "", image: Cinco },
+    { topic: "I - Passo zero", description: "", image: Seis },
+    { topic: "I - Passo zero", description: "", image: Sete },
 ];
 
 export const LPFEF = () => {

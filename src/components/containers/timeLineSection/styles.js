@@ -11,24 +11,24 @@ export const DividerLine = styled.div`
 
 export const ImageContainer = styled.div`
   width: 100%;
-  height: 150px; /* Ajuste a altura conforme necessário */
+  height: auto;
   overflow: hidden;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-radius: 8px;
 
   img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: contain;
   }
 `;
+
 
 export const TextContainer = styled.div`
     text-align: center;
     display: flex;
     justify-content: center;
     line-height: 1rem;
-  animation: fadeIn 2s alternate, slideIn 1s ease-out;
+    animation: fadeIn 2s alternate, slideIn 1s ease-out;
 
 
   margin: 20px 15px 20px 15px;
@@ -111,7 +111,8 @@ export const TimelineItemContainer = styled.div`
   
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
+  /* margin-bottom: 1.5rem; */
   align-items: center;
   width: 100%;
   max-width: 600px;
@@ -131,21 +132,21 @@ export const TimelineItemContainer = styled.div`
   }
 
   @media (min-width: 768px) {
-    padding: 30px;
+    /* padding: 30px; */
   }
 
   @media (min-width: 1024px) {
-    padding: 40px;
+    /* padding: 40px; */
   }
 
   @media (max-width: 768px) {
-    padding: 8px 0;
-    margin-bottom: 8px;
+    /* padding: 8px 0; */
+    /* margin-bottom: 8px; */
   }
 
   @media (min-width: 1024px) {
-    padding: 15px 0;
-    margin-bottom: 15px;
+    /* padding: 15px 0; */
+    /* margin-bottom: 15px; */
   }
 `;
 
