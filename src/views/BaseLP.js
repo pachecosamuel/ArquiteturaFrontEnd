@@ -82,6 +82,7 @@ export const LandingPage = () => {
                 <AboutSection
                     imageUrl={profilePalestra}
                     imageUrl2={profileImagem}
+                    TextoH2="Sobre Mim"
 
                     paragrafo="Samuel Pacheco, fundador da SMV, formado em Gestão da Tecnologia
                                 da Informação e com pós-graduação em Engenharia de Software pela

@@ -4,7 +4,7 @@ import { AboutContainer, FlexContainer, TextBox, Image } from "./style";
 import { Slide } from "react-awesome-reveal";
 import React from "react";
 
-export const AboutSection = ({
+export const ProvaSocial = ({
   paragrafo,
   imageUrl,
   imageUrl2,
@@ -69,5 +69,5 @@ export const AboutSection = ({
   );
 };
 
-export default AboutSection;
+export default ProvaSocial;
 
