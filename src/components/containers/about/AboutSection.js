@@ -57,13 +57,6 @@ export const AboutSection = ({
           />
         </Slide>
 
-        <Slide direction="right" triggerOnce>
-          <Image
-            src={imageUrl3}
-            alt="Minha foto profissional"
-          />
-        </Slide>
-
       </FlexContainer>
     </AboutContainer>
   );

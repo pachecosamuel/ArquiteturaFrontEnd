@@ -77,7 +77,7 @@ export const LPFEF = () => {
         imageUrl2={p2}
         imageUrl3={p3}
         paragrafo="Resultado é a melhor medida de progresso"
-        backgroundColor="#f8f9fa"
+        backgroundColor="#f7fff4"
       />
 
       <AboutSection
