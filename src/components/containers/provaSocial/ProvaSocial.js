@@ -1,6 +1,13 @@
 // src/components/containers/AboutSection.js
 
-import { AboutContainer, FlexContainer, TextBox, Image } from "./style";
+import {
+  AboutContainer,
+  FlexContainer,
+  TextBox,
+  Image,
+  ButtonContainer,
+  DownloadButton,
+} from "./style";
 import { Slide } from "react-awesome-reveal";
 import React from "react";
 
@@ -17,11 +24,14 @@ export const ProvaSocial = ({
   paragraphBgColor,
   paragraphHoverBgColor,
   backgroundColor,
+  buttonText,
+  buttonColor,
+  buttonHoverColor,
+  onButtonClick
 }) => {
-
   // Efeito de animação
   React.useEffect(() => {
-    document.querySelector('.about-container').classList.add('animate');
+    document.querySelector(".about-container").classList.add("animate");
   }, []);
 
   return (
@@ -37,32 +47,31 @@ export const ProvaSocial = ({
         <Slide direction="left" triggerOnce>
           <TextBox>
             <h2>{TextoH2}</h2>
-            <p>
-              {paragrafo}
-            </p>
+            <p>{paragrafo}</p>
           </TextBox>
         </Slide>
 
         <Slide direction="right" triggerOnce>
-          <Image
-            src={imageUrl}
-            alt="Minha foto profissional"
-          />
+          <Image src={imageUrl} alt="Minha foto profissional" />
         </Slide>
 
         <Slide direction="right" triggerOnce>
-          <Image
-            src={imageUrl2}
-            alt="Minha foto profissional"
-          />
+          <Image src={imageUrl2} alt="Minha foto profissional" />
         </Slide>
 
         <Slide direction="right" triggerOnce>
-          <Image
-            src={imageUrl3}
-            alt="Minha foto profissional"
-          />
+          <Image src={imageUrl3} alt="Minha foto profissional" />
         </Slide>
+
+        <ButtonContainer>
+          <DownloadButton
+            buttonColor={buttonColor}
+            buttonHoverColor={buttonHoverColor}
+            onClick={onButtonClick}
+          >
+            {buttonText}
+          </DownloadButton>
+        </ButtonContainer>
 
       </FlexContainer>
     </AboutContainer>
@@ -70,4 +79,3 @@ export const ProvaSocial = ({
 };
 
 export default ProvaSocial;
-

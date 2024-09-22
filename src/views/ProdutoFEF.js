@@ -23,8 +23,8 @@ import Sete from "../assets/FEF/7.png";
 const headerData = {
   title: "Maior renda, sucesso profissional e realização de objetivos.",
   description:
-    "Pesquisa da (OECD) revelou que trabalhadores com maior alfabetização financeira tendem a ter salários mais altos, participam mais de programas de previdência privada e apresentam maior estabilidade no emprego e na vida.",
-  buttonText: "Inscreva-se Agora",
+    "Pesquisa da (OECD) revelou que quem possui educação financeira tende a ter salários mais altos, participam mais de programas de previdência privada e apresentam maior estabilidade no emprego e na vida.",
+  buttonText: "Clique e venha mudar de vida",
   imageUrl: Capa, // URL dinâmica da imagem
   onButtonClick: () => {
     // Função personalizada para o clique do botão
@@ -68,8 +68,6 @@ export const LPFEF = () => {
         src="https://www.youtube.com/embed/OJ2nZlPbkcU"
         title="Apresentação do Curso Prosperando com Educação Financeira"
       />
-      {/* <TopSection /> */}
-      <LinhaDoTempo data={data} />
 
       <ProvaSocial
         TextoH2="O que nossos alunos dizem"
@@ -78,7 +76,12 @@ export const LPFEF = () => {
         imageUrl3={p3}
         paragrafo="Resultado é a melhor medida de progresso"
         backgroundColor="#f7fff4"
+        onButtonClick={headerData.onButtonClick}
+        buttonText={headerData.buttonText}
       />
+
+      {/* <TopSection /> */}
+      <LinhaDoTempo data={data} />
 
       <AboutSection
         paragrafo="Samuel Pacheco, fundador da SMV, formado em Gestão da Tecnologia

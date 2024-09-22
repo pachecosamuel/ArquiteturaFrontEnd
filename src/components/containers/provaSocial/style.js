@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../../styles/theme";
 
 export const AboutContainer = styled.div`
   padding: 3rem;
@@ -10,7 +11,7 @@ export const AboutContainer = styled.div`
 
   h2 {
     font-size: 2.5rem;
-    margin-bottom: 0.1rem;
+    margin-bottom: -1rem;
     text-align: center;
     transform: translateY(-20px);
     transition: all 0.8s ease-in-out;
@@ -28,7 +29,7 @@ export const AboutContainer = styled.div`
 
   p {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     padding: 1rem;
     background-color: ${(props) => props.paragraphBgColor || 'rgba(91, 155, 213, 0.1)'}; /* Fundo de parágrafo dinâmico */
     border-radius: 10px;
@@ -77,18 +78,18 @@ export const FlexContainer = styled.div`
 export const TextBox = styled.div`
   /* width: 100%; */
   flex: 1;
-  text-align: justify;
+  text-align: center;
   padding: 0 2rem;
 
   @media (max-width: 768px) {
-    text-align: justify;
+    /* text-align: justify; */
     padding: 0;
     margin: 1rem 0;
     max-width: 420px;
   }
 
   @media (min-width: 1024px) {
-    text-align: justify;
+    /* text-align: justify; */
     padding: 0;
     margin: 1rem 0;
     max-width: 720px;
@@ -116,5 +117,37 @@ export const Image = styled.img`
 
   @media (min-width: 768px) {
     max-width: 710px;
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  margin-top: 20px;
+
+  align-items: end;
+
+  @media (min-width: 760px) {
+    margin-top: 10rem;
+  }
+
+  @media (min-width: 1024px) {
+    margin-top: 12.8rem;
+  }
+
+  @media (max-width: 760px) {
+    margin-top: 2rem;
+  }
+
+`;
+
+export const DownloadButton = styled.button`
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: ${({ buttonColor }) => buttonColor || theme.colors.highlight};
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${({ buttonHoverColor }) => buttonHoverColor || theme.colors.secondary};
   }
 `;
