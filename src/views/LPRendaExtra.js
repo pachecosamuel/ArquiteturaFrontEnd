@@ -6,15 +6,14 @@ import { FooterSection } from "../components/containers/footer/FooterSection"
 import { Header } from "../components/containers/header/Header"
 import { HeaderLogo } from "../components/containers/headerLogo/HeaderLogo"
 import { LinhaDoTempoSimples } from "../components/containers/timeLineSection/LinhaDoTempoSimples"
-// import TelaBtc from "../../../assets/TelaBtc.png"
+import { Helmet } from "react-helmet";
 
 import { theme } from "../styles/theme";
 
-import profilePalestra from "../assets/Palestra.png"
-import profileImagem from "../assets/Profile.jpg"
+import profilePalestra from "../assets/Me/Palestra.webp";
+import profileImagem from "../assets/Me/Profile.webp";
 
-
-import TelaBtc from "../assets/TelaBtc.png"
+import TelaBtc from "../assets/TelaBtc.webp"
 import {
     FaLightbulb, FaDollarSign, FaClipboardList, FaChartLine,
     FaShoppingCart, FaPenNib, FaShareAlt, FaLaptop, FaComments
@@ -22,23 +21,16 @@ import {
 
 const { Content } = Layout;
 
-const scrollToForm = () => {
-    const formElement = document.getElementById("simpleForm");
-    if (formElement) {
-        formElement.scrollIntoView({ behavior: "smooth" });
-        formElement.classList.add("highlight");
-        setTimeout(() => {
-            formElement.classList.remove("highlight");
-        }, 2000); // Duração do destaque
-    }
-};
-
 const headerData = {
     title: "eBook Gratuito",
     description: "Descubra 5 estratégias eficientes com o propósito de te iniciar na jornada da renda extra. ",
     buttonText: "Baixe Grátis Agora",
     imageUrl: TelaBtc, // URL dinâmica da imagem
-    onButtonClick: scrollToForm,
+    onButtonClick: () => {
+        // Função personalizada para o clique do botão
+        console.log("Button clicked!");
+        // window.open("https://pay.kiwify.com.br/BpJXLZv", "_blank"); // Abre o link em uma nova aba
+    },
     backgroundColor: "#f8f9fa", // Nova cor de fundo
     textColor: "#000",          // Nova cor de texto
     shadowColor: "rgba(0, 0, 0, 0.2)", // Cor da sombra
@@ -60,31 +52,36 @@ const DataToTimeline = [
 
 export const LPrendaextra = () => {
     return (
-        <Layout>
-            <Content>
-                <HeaderLogo />
-                <Header
-                    title={headerData.title}
-                    description={headerData.description}
-                    buttonText={headerData.buttonText}
-                    imageUrl={headerData.imageUrl}
-                    onButtonClick={headerData.onButtonClick}
+        <>
+            <Helmet>
+                <title>Sua Melhor Versão - Renda extra</title>
+                <meta name="Renda extra" content="Conheça mais sobre nossa missão de promover o desenvolvimento financeiro e pessoal." />
+            </Helmet>
+            <Layout>
+                <Content>
+                    <HeaderLogo />
+                    <Header
+                        title={headerData.title}
+                        description={headerData.description}
+                        buttonText={headerData.buttonText}
+                        imageUrl={headerData.imageUrl}
+                        onButtonClick={headerData.onButtonClick}
                     // backgroundColor={headerData.backgroundColor}
                     // textColor={headerData.textColor}
                     // shadowColor={headerData.shadowColor}
                     // buttonColor={headerData.buttonColor}
                     // buttonHoverColor={headerData.buttonHoverColor}
-                />
-                <TopSection />
-                <LinhaDoTempoSimples
-                    data={DataToTimeline}
-                />
-                <AboutSection
-                    imageUrl={profilePalestra}
-                    imageUrl2={profileImagem}
-                    TextoH2="Sobre Mim"
+                    />
+                    <TopSection />
+                    <LinhaDoTempoSimples
+                        data={DataToTimeline}
+                    />
+                    <AboutSection
+                        imageUrl={profilePalestra}
+                        imageUrl2={profileImagem}
+                        TextoH2="Sobre Mim"
 
-                    paragrafo="Samuel Pacheco, fundador da SMV, formado em Gestão da Tecnologia
+                        paragrafo="Samuel Pacheco, fundador da SMV, formado em Gestão da Tecnologia
                                 da Informação e com pós-graduação em Engenharia de Software pela
                                 universidade PUC Minas. Hoje, após 8 anos de estudos,
                                 qualificações e mercado de trabalho, buscar difundir através da
@@ -92,15 +89,16 @@ export const LPrendaextra = () => {
                                 impacto social, educação contínua e transformação de vida."
 
 
-                    titleColor="#333"
-                    titleHoverColor={theme.colors.highlight}
-                // paragraphBgColor="rgba(91, 155, 213, 0.1)"
-                // paragraphHoverBgColor="rgba(91, 155, 213, 0.3)"
-                // backgroundColor="#f0f0f0"
-                />
-                <FooterSection />
-            </Content>
-        </Layout>
+                        titleColor="#333"
+                        titleHoverColor={theme.colors.highlight}
+                    // paragraphBgColor="rgba(91, 155, 213, 0.1)"
+                    // paragraphHoverBgColor="rgba(91, 155, 213, 0.3)"
+                    // backgroundColor="#f0f0f0"
+                    />
+                    <FooterSection />
+                </Content>
+            </Layout>
+        </>
     );
 };
 

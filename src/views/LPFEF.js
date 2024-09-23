@@ -3,22 +3,23 @@ import { FooterSection } from "../components/containers/footer/FooterSection";
 import { Header } from "../components/containers/header/Header";
 import { HeaderLogo } from "../components/containers/headerLogo/HeaderLogo";
 import { LinhaDoTempo } from "../components/containers/timeLineSection/LinhaDoTempo";
-import { VideoEmbed } from "./../components/containers/videoEmbed/VideoEmbed";
+import { VideoEmbed } from "../components/containers/videoEmbed/VideoEmbed";
 import { ProvaSocial } from "../components/containers/provaSocial/ProvaSocial";
+import { Helmet } from "react-helmet"
 
-import p1 from "../assets/ProvaSocial/provaSocial.gif";
+import p1 from "../assets/ProvaSocial/provaSocial1.gif";
 import p2 from "../assets/ProvaSocial/provaSocial2.gif";
 import p3 from "../assets/ProvaSocial/provaSocial3.gif";
-import profilePalestra from "../assets/Palestra.png";
-import profileImagem from "../assets/Profile.jpg";
-import Capa from "../assets/FEF/CapaFEF.png";
-import Um from "../assets/FEF/1.png";
-import Dois from "../assets/FEF/2.png";
-import Tres from "../assets/FEF/3.png";
-import Quatro from "../assets/FEF/4.png";
-import Cinco from "../assets/FEF/5.png";
-import Seis from "../assets/FEF/6.png";
-import Sete from "../assets/FEF/7.png";
+import profilePalestra from "../assets/Me/Palestra.webp";
+import profileImagem from "../assets/Me/Profile.webp";
+import Capa from "../assets/FEF/CapaFEF.webp";
+import Um from "../assets/FEF/1.webp";
+import Dois from "../assets/FEF/2.webp";
+import Tres from "../assets/FEF/3.webp";
+import Quatro from "../assets/FEF/4.webp";
+import Cinco from "../assets/FEF/5.webp";
+import Seis from "../assets/FEF/6.webp";
+import Sete from "../assets/FEF/7.webp";
 
 const headerData = {
   title: "Maior renda, sucesso profissional e realização de objetivos.",
@@ -29,6 +30,7 @@ const headerData = {
   onButtonClick: () => {
     // Função personalizada para o clique do botão
     console.log("Button clicked!");
+    // window.open("https://pay.kiwify.com.br/BpJXLZv", "_blank"); // Abre o link em uma nova aba
   },
   backgroundColor: "#f8f9fa", // Nova cor de fundo
   textColor: "#000", // Nova cor de texto
@@ -50,6 +52,11 @@ const data = [
 export const LPFEF = () => {
   return (
     <>
+      <Helmet>
+        <title>Sua Melhor Versão - Educação financeira</title>
+        <meta name="Educação financeira" content="O curso que vai transformar sua vida financeira com fundamentos práticos e avançados para alcançar estabilidade." />
+      </Helmet>
+
       <HeaderLogo />
       <Header
         title={headerData.title}

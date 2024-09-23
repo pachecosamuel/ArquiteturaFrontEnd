@@ -3,9 +3,9 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import { LPrendaextra } from './views/BaseLP';
+import { LPrendaextra } from './views/LPRendaExtra';
 import { Sobre } from "./views/Sobre"
-import { LPFEF } from "./views/ProdutoFEF"
+import { LPFEF } from "./views/LPFEF"
 
 function App() {
 

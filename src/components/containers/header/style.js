@@ -79,10 +79,12 @@ export const DescriptionText = styled.p`
 
   @media (min-width: 760px) {
     font-size: 1.2rem;
+    text-align: start;
+    margin: 0;
   }
 
   @media (min-width: 375px) {
-    margin-left: 1.5rem;
+    margin-left: 2rem;
   }
 
   @media (min-width: 425px) {
