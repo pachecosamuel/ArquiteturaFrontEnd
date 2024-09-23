@@ -14,7 +14,7 @@ function App() {
       <Router>
         <Routes>
 
-          <Route path='/' element={<LandingPage />} />
+          <Route path='/' element={<LPFEF />} />
 
           <Route path='/sobre' element={<Sobre />} />
           

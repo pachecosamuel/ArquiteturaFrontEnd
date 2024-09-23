@@ -59,7 +59,6 @@ export const TituloPagina = styled.h2`
   border-top-left-radius: 0.3rem;
   
   background-position: top right, bottom left;
-  
 
   @media (min-width: 760px) {
     font-size: 2rem;
