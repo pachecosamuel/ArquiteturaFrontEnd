@@ -5,7 +5,9 @@ export const theme = {
         highlight: "#008F8C",
         support: "#015958",
         neutral: "#023535",
-        forPlaceHolder: "#8DA691"
+        forPlaceHolder: "#8DA691",
+        emphasis: "#e8ffcd"
+
     },
     font: {
         family: "Lora, serif"

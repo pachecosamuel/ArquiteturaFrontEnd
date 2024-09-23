@@ -22,7 +22,9 @@ export const Header = ({
   textColor,
   shadowColor,
   buttonColor,
-  buttonHoverColor }) => {
+  buttonHoverColor,
+  buttonFontColor
+ }) => {
 
   const scrollToForm = () => {
     const formElement = document.getElementById("simpleForm");
@@ -49,6 +51,7 @@ export const Header = ({
           <DownloadButton 
           buttonColor={buttonColor}
           buttonHoverColor={buttonHoverColor}
+          buttonFontColor={buttonFontColor}
           onClick={onButtonClick || scrollToForm}>
             {buttonText}
           </DownloadButton>
@@ -76,7 +79,8 @@ Header.propTypes = {
   textColor: PropTypes.string,       
   shadowColor: PropTypes.string,     
   buttonColor: PropTypes.string,     
-  buttonHoverColor: PropTypes.string 
+  buttonHoverColor: PropTypes.string,
+  buttonFontColor: PropTypes.string,
 };
 
 export default Header;

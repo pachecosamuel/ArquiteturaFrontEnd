@@ -71,6 +71,7 @@ export const DescriptionText = styled.p`
   color: ${({ textColor }) => textColor || '#fff'};
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   text-align: justify;
+
   
   @media (max-width: 760px) {
     font-size: 1.2rem;
@@ -79,6 +80,26 @@ export const DescriptionText = styled.p`
 
   @media (min-width: 760px) {
     font-size: 1.2rem;
+  }
+
+  @media (min-width: 375px) {
+    margin-left: 1.5rem;
+  }
+
+  @media (min-width: 425px) {
+    margin-left: 4rem;
+  }
+
+  @media (min-width: 500px) {
+    margin-left: 7rem;
+  }
+
+  @media (min-width: 600px) {
+    margin-left: 9rem;
+  }
+
+  @media (min-width: 700px) {
+    margin-left: 11rem;
   }
 `;
 
@@ -110,7 +131,7 @@ export const CoverImage = styled.img`
 
 export const ButtonContainer = styled.div`
   margin-top: 20px;
-
+  color: ${({ buttonFontColor }) => buttonFontColor || '#fff'};
   align-items: end;
 
   @media (min-width: 760px) {

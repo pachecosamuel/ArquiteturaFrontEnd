@@ -19,23 +19,25 @@ import Quatro from "../assets/FEF/4.png"
 import Cinco from "../assets/FEF/5.png"
 import Seis from "../assets/FEF/6.png"
 import Sete from "../assets/FEF/7.png"
+import { theme } from "../styles/theme"
 
 
 
 const headerData = {
-    title: "Maior renda, sucesso profissional e realização de objetivos.",
+    title: "Maior renda, sucesso profissional e realização de objetivos!",
     description: "Pesquisa da (OECD) revelou que trabalhadores com maior alfabetização financeira tendem a ter salários mais altos, participam mais de programas de previdência privada e apresentam maior estabilidade no emprego e na vida.",
-    buttonText: "Inscreva-se Agora",
+    buttonText: "Quero essa oportunidade",
     imageUrl: Capa, // URL dinâmica da imagem
     onButtonClick: () => {
         // Função personalizada para o clique do botão
-        console.log("Button clicked!");
+        window.open("https://pay.kiwify.com.br/BpJXLZv", "_blank");
     },
     backgroundColor: "#f8f9fa", // Nova cor de fundo
     textColor: "#000",          // Nova cor de texto
     shadowColor: "rgba(0, 0, 0, 0.2)", // Cor da sombra
-    buttonColor: "#28a745",     // Cor do botão
-    buttonHoverColor: "#218838" // Cor do botão no hover
+    buttonColor: "#FACFCE",     // Cor do botão
+    buttonHoverColor: "#218838", // Cor do botão no hover
+    buttonFontColor: "#000"
 };
 
 
@@ -61,10 +63,11 @@ export const LPFEF = () => {
                 buttonText={headerData.buttonText}
                 imageUrl={headerData.imageUrl}
                 onButtonClick={headerData.onButtonClick}
+                buttonFontColor={headerData.textColor}
+                buttonColor={headerData.buttonColor}
                 // backgroundColor={headerData.backgroundColor}
                 // textColor={headerData.textColor}
                 // shadowColor={headerData.shadowColor}
-                // buttonColor={headerData.buttonColor}
                 // buttonHoverColor={headerData.buttonHoverColor}
             />
             {/* Adicione os outros componentes necessários aqui */}
