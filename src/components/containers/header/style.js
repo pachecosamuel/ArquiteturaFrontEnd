@@ -35,6 +35,7 @@ export const TextContainer = styled.div`
   text-align: center;
   animation: fadeIn 2s alternate, slideIn 1s ease-out;
   
+  
   @media (max-width: 760px) {
     margin-bottom: 1rem;
   }
@@ -71,6 +72,27 @@ export const DescriptionText = styled.p`
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   text-align: justify;
 
+  padding: 1rem;
+
+  background-color: ${(props) => props.paragraphBgColor || 'rgba(91, 155, 213, 0.1)'}; /* Fundo de parágrafo dinâmico */
+  border-radius: 10px;
+  transition: background-color 0.5s ease;
+  transform: translateY(20px);
+  transition: all 0.8s ease-in-out;
+
+    //Efeito ao passar o mouse sobre o parágrafo
+    &:hover {
+      background-color: rgba(91, 155, 213, 0.3);
+    }
+
+      /* Adicionar animação ao aparecer os textos */
+    &.animate {
+      h2, p {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
   
   @media (max-width: 760px) {
     font-size: 1.2rem;
@@ -84,23 +106,24 @@ export const DescriptionText = styled.p`
   }
 
   @media (min-width: 375px) {
-    margin-left: 2rem;
+    /* margin-left: 1rem; */
+    margin: auto;
   }
 
   @media (min-width: 425px) {
-    margin-left: 4rem;
+    margin: auto;
   }
 
   @media (min-width: 500px) {
-    margin-left: 7rem;
+    margin: auto;
   }
 
   @media (min-width: 600px) {
-    margin-left: 9rem;
+    margin: auto;
   }
 
   @media (min-width: 700px) {
-    margin-left: 11rem;
+    margin: auto;
   }
 `;
 
@@ -131,12 +154,13 @@ export const CoverImage = styled.img`
 `;
 
 export const ButtonContainer = styled.div`
-  margin-top: 20px;
+  padding-top: 2rem;
+  /* margin-top: 20px; */
   color: ${({ buttonFontColor }) => buttonFontColor || '#fff'};
   align-items: end;
 
   @media (min-width: 760px) {
-    margin-top: 10rem;
+    margin-top: 5rem;
   }
 
   @media (min-width: 1024px) {
