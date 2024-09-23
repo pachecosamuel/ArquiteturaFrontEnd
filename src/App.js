@@ -3,7 +3,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import { LandingPage } from './views/BaseLP';
+import { LPrendaextra } from './views/BaseLP';
 import { Sobre } from "./views/Sobre"
 import { LPFEF } from "./views/ProdutoFEF"
 
@@ -18,9 +18,9 @@ function App() {
 
           <Route path='/sobre' element={<Sobre />} />
           
-          <Route path='/formulario' element={<LandingPage />} />
+          <Route path='/rendaextra' element={<LPrendaextra />} />
 
-          <Route path="/novoproduto" element={<LPFEF />} />
+          <Route path="/educacaofinanceira" element={<LPFEF />} />
           
         </Routes>
       </Router>

@@ -58,7 +58,7 @@ const DataToTimeline = [
     { topic: "VIII - Conclusões e reflexões", description: "", icon: <FaComments /> },
 ];
 
-export const LandingPage = () => {
+export const LPrendaextra = () => {
     return (
         <Layout>
             <Content>
@@ -104,4 +104,4 @@ export const LandingPage = () => {
     );
 };
 
-export default LandingPage;
+export default LPrendaextra;
