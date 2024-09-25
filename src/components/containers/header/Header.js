@@ -12,19 +12,20 @@ import {
   DownloadButton
 } from "./style";
 
-export const Header = ({ 
-  title, 
-  description, 
-  buttonText, 
-  imageUrl, 
-  onButtonClick,   
+export const Header = ({
+  title,
+  description,
+  buttonText,
+  imageUrl,
+  imageUrl2,
+  onButtonClick,
   backgroundColor,
   textColor,
   shadowColor,
   buttonColor,
   buttonHoverColor,
   buttonFontColor
- }) => {
+}) => {
 
   const scrollToForm = () => {
     const formElement = document.getElementById("simpleForm");
@@ -46,23 +47,29 @@ export const Header = ({
 
         <DescriptionText textColor={textColor} > {description}</DescriptionText>
 
-        <ButtonContainer>
-
-          <DownloadButton 
-          buttonColor={buttonColor}
-          buttonHoverColor={buttonHoverColor}
-          buttonFontColor={buttonFontColor}
-          onClick={onButtonClick || scrollToForm}>
-            {buttonText}
-          </DownloadButton>
-
-        </ButtonContainer>
-
       </TextContainer>
 
       <ImageContainer>
         <CoverImage src={imageUrl} alt="Capa do eBook" />
       </ImageContainer>
+
+      <ImageContainer>
+        <CoverImage 
+        src={imageUrl2} 
+        alt="Capa do eBook" />
+      </ImageContainer>
+
+      <ButtonContainer>
+
+        <DownloadButton
+          buttonColor={buttonColor}
+          buttonHoverColor={buttonHoverColor}
+          buttonFontColor={buttonFontColor}
+          onClick={onButtonClick || scrollToForm}>
+          {buttonText}
+        </DownloadButton>
+
+      </ButtonContainer>
 
     </HeaderContainer>
   );
@@ -75,10 +82,10 @@ Header.propTypes = {
   buttonText: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
   onButtonClick: PropTypes.func,
-  backgroundColor: PropTypes.string, 
-  textColor: PropTypes.string,       
-  shadowColor: PropTypes.string,     
-  buttonColor: PropTypes.string,     
+  backgroundColor: PropTypes.string,
+  textColor: PropTypes.string,
+  shadowColor: PropTypes.string,
+  buttonColor: PropTypes.string,
   buttonHoverColor: PropTypes.string,
   buttonFontColor: PropTypes.string,
 };

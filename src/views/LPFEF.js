@@ -28,9 +28,10 @@ const headerData = {
   buttonText: "Clique e venha mudar de vida",
   imageUrl: Capa, // URL dinâmica da imagem
   onButtonClick: () => {
-    // Função personalizada para o clique do botão
-    console.log("Button clicked!");
-    // window.open("https://pay.kiwify.com.br/BpJXLZv", "_blank"); // Abre o link em uma nova aba
+    window.open("https://pay.kiwify.com.br/LjJCY5Y", "_blank");
+
+    // Redireciona para a página de upsell
+    window.location.href = "https://suamelhorversao.netlify.app/educacaofinanceira";
   },
   backgroundColor: "#f8f9fa", // Nova cor de fundo
   textColor: "#000", // Nova cor de texto

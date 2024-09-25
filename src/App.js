@@ -3,9 +3,9 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import { LPrendaextra } from './views/LPRendaExtra';
-import { Sobre } from "./views/Sobre"
-import { LPFEF } from "./views/LPFEF"
+import { LPRendaExtra } from './views/LPRendaExtra';
+import { Sobre } from "./views/Sobre";
+import { LPFEF } from "./views/LPFEF";
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
 
           <Route path='/sobre' element={<Sobre />} />
           
-          <Route path='/rendaextra' element={<LPrendaextra />} />
+          <Route path='/rendaextra' element={<LPRendaExtra />} />
 
           <Route path="/educacaofinanceira" element={<LPFEF />} />
           

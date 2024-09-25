@@ -24,18 +24,15 @@ export const ImageContainer = styled.div`
 `;
 
 export const TextContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    line-height: 1rem;
+  display: flex;
+  justify-content: center;
   animation: fadeIn 2s alternate, slideIn 1s ease-out;
-
 
   margin: 20px 15px 20px 15px;
   padding-left: 0.8rem;
   width: 90%;
   max-width: 600px;
   border-radius: 8px;
-  height: 3rem;
   
   background-color: lightgreen;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -60,14 +57,12 @@ export const TextContainer = styled.div`
 
 export const DescriptionText = styled.p`
   font-size: 1rem;
-  line-height: 0.5rem;
 
   color: #fff;
   text-shadow: 1px 1px 3px rgba(0.125, 0.125, 0.125, 0.5);
 
   @media (max-width: 760px) {
     font-size: 1.2rem;
-    width: 260px;
   }
 
   @media (min-width: 760px) {
@@ -76,8 +71,8 @@ export const DescriptionText = styled.p`
 `;
 
 export const TimelineContainer = styled.div`
-  margin-bottom: 1rem;
   padding: 0.5rem;
+  padding-bottom: 1.5rem;
 
   display: flex;
   flex-direction: column;
