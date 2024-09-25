@@ -1,5 +1,4 @@
 import React from "react";
-import { Layout } from "antd";
 import { VideoEmbed } from "../components/containers/videoEmbed/VideoEmbed"
 import { AboutSection } from "../components/containers/about/AboutSection";
 import { FooterSection } from "../components/containers/footer/FooterSection";
